@@ -70,10 +70,10 @@ const Categories = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                Categories
+                Categorias
               </span>
               <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
-                Browse by Category
+                Escolha por categoria
               </h2>
             </div>
 
@@ -118,7 +118,7 @@ const Categories = () => {
 
           <Swiper
             ref={sliderRef}
-            slidesPerView={6}
+            slidesPerView={4}
             breakpoints={{
               // when window width is >= 640px
               0: {
@@ -129,9 +129,6 @@ const Categories = () => {
                 // spaceBetween: 4,
               },
               // when window width is >= 768px
-              1200: {
-                slidesPerView: 6,
-              },
             }}
           >
             {data.map((item, key) => (

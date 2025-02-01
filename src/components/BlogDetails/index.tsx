@@ -1,12 +1,11 @@
 import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
-import Link from "next/link";
 
-const BlogDetails = () => {
+const BlogDetails = ({title}) => {
   return (
     <>
-      <Breadcrumb title={"Blog Details"} pages={["blog details"]} />
+      <Breadcrumb title={title} pages={[title]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[750px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="rounded-[10px] overflow-hidden mb-7.5">
@@ -20,21 +19,8 @@ const BlogDetails = () => {
           </div>
 
           <div>
-            <span className="flex items-center gap-3 mb-4">
-              <a href="#" className="ease-out duration-200 hover:text-blue">
-                Mar 27, 2022
-              </a>
-
-              {/* <!-- divider --> */}
-              <span className="block w-px h-4 bg-gray-4"></span>
-
-              <a href="#" className="ease-out duration-200 hover:text-blue">
-                300k Views
-              </a>
-            </span>
-
             <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
-              What information is needed for shipping?
+              {title}
             </h2>
 
             <p className="mb-6">
@@ -130,39 +116,6 @@ const BlogDetails = () => {
             </p>
 
             <div className="flex flex-wrap items-center justify-between gap-10 mt-10">
-              <div className="flex flex-wrap items-center gap-5">
-                <p>Popular Tags :</p>
-
-                <ul className="flex flex-wrap items-center gap-3.5">
-                  <li>
-                    <a
-                      className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
-                      href="#"
-                    >
-                      Desktop
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
-                      href="#"
-                    >
-                      Macbook
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
-                      href="#"
-                    >
-                      PC
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
               {/* <!-- Social Links start --> */}
               <div className="flex items-center gap-3">
                 <a
