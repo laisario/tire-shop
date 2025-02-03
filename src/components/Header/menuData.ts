@@ -14,21 +14,10 @@ export const menuData: Menu[] = [
     path: "/produtos",
   },
   {
-    id: 3,
-    title: "Whatsapp",
-    newTab: false,
-    path: "/contato",
-  },
-  {
     id: 4,
     title: "Sobre nós",
     newTab: false,
     path: "/sobre",
   },
-  {
-    id: 5,
-    title: "Encontre seu pneu",
-    newTab: false,
-    path: "/pneus",
-  },
+
 ];

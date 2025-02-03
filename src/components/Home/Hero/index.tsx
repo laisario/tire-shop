@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <section className="overflow-hidden pb-10 lg:pb-12.5 xl:pb-15 pt-57.5 sm:pt-45 lg:pt-30 xl:pt-51.5 bg-[#E5EAF4]">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-        <div className="flex flex-col gap-5">
-          <div className="flex  w-full">
-            <div className="relative z-1 rounded-[10px] bg-white overflow-hidden">
+        <div className="flex flex-wrap gap-5">
+          {/* <div className="xl:max-w-[757px]  w-full"> */}
+            <div className="flex items-center relative xl:max-w-[757px]  w-full z-1 rounded-[10px] bg-white overflow-hidden">
               {/* <!-- bg shapes --> */}
               <Image
                 src="/images/hero/hero-bg.png"
@@ -21,15 +21,15 @@ const Hero = () => {
 
               <HeroCarousel />
             </div>
-          </div>
+          {/* </div> */}
 
-          <div className="w-full">
-            <div className="flex flex-col sm:flex-row xl:flex-row gap-5">
+          <div className="xl:max-w-[393px] w-full">
+            <div className="flex flex-col sm:flex-row xl:flex-col gap-5">
               <div className="w-full relative rounded-[10px] bg-white p-4 sm:p-7.5">
                 <div className="flex items-center gap-14">
                   <div>
-                    <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="#">Pneu Continental Aro 14 ContiPowerContact 2 185/70R14 88H - Original Onix LS e LT</a>
+                    <h2 className="max-w-[130px] font-semibold text-dark text-xl mb-20">
+                      <a href="#">Aro 14 ContiPowerContact</a>
                     </h2>
 
                     <div>
@@ -60,8 +60,8 @@ const Hero = () => {
               <div className="w-full relative rounded-[10px] bg-white p-4 sm:p-7.5">
                 <div className="flex items-center gap-14">
                   <div>
-                    <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="#">Pneu 265/60r18 aro 18 Continental CrossContact ATR A/T 110T</a>
+                    <h2 className="max-w-[130px] font-semibold text-dark text-xl mb-20">
+                      <a href="#">Aro 18 CrossContact ATR A/T 110T</a>
                     </h2>
 
                     <div>
