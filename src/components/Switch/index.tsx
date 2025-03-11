@@ -1,17 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FindByMeasure from './FindByMeasure';
 import FindByCar from './FindByCar';
 
-function Switch(props) {
-  const {
-    selectedOption,
-    setSelectedOption,
-    isMobile,
-  } = props;
-  console.log(selectedOption)
+
+function Switch() {
+  const [selectedOption, setSelectedOption] = useState("medida");
 
   return (
-    <div className="flex flex-col sm:flex-row lg:flex-row gap-2  justify-start">
+    <div className="flex flex-row items-center  justify-between" >
       <div className="flex flex-row  justify-end items-center gap-2 sm:py-2 xs:py-2">
         <span className="text-gray-7 font-medium text-base">Busque por</span>
         <div className="relative flex items-center w-50 bg-gray-2 rounded-lg p-2">
@@ -61,11 +57,12 @@ function Switch(props) {
           </button>
         </div>
       </div>
+      
 
-      {/* <div className='flex'> */}
-        {selectedOption === 'medida' && <FindByMeasure isMobile={isMobile} />}
+      <div>
+        {selectedOption === 'medida' && <FindByMeasure />}
         {selectedOption === 'carro' && <FindByCar />}
-      {/* </div> */}
+      </div>
 
       
     </div>

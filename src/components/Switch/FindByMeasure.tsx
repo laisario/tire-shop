@@ -6,7 +6,7 @@ const widths = ["Largura", "10cm", "20cm", "30cm"];
 const rims = ["Aro", "10cm", "20cm", "30cm"];
 const heights = ["Altura","10cm", "20cm", "30cm"];
 
-function FindByMeasure({isMobile}) {
+function FindByMeasure() {
   const [measures, setMeasures] = useState<{ width: string; height: string; rim: string }>({
     width: '',
     height: '',
@@ -25,7 +25,7 @@ function FindByMeasure({isMobile}) {
   const styleSelect = "bg-white border border-yellow text-gray-7 text-md rounded-lg focus:ring-yellow focus:border-yellow block w-30 p-2.5 dark:bg-yellow dark:border-yellow dark:placeholder-gray-4 dark:text-white dark:focus:ring-yellow dark:focus:border-yellow"
 
   return (
-      <div className='w-auto flex w- items-center justify-start lg:gap-2 gap-1'>
+      <div className='sm:flex lg:flex items-center justify-start lg:gap-2 mb-1 gap-1'>
         <form className="flex flex-row lg:gap-2 gap-1">
           <select 
             id="widths" 

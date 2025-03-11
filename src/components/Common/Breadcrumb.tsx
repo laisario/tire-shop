@@ -18,7 +18,7 @@ const Breadcrumb = ({ title, pages }) => {
 
               {pages.length > 0 &&
                 pages.map((page, key) => (
-                  <li className="text-custom-sm last:text-blue capitalize" key={key}>
+                  <li className="text-custom-sm last:text-yellow capitalize" key={key}>
                     {page} 
                   </li>
                 ))}

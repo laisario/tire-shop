@@ -1,21 +1,24 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
+import brands from '../../../data/brands.json';
+import { getModels, getVersions, getYears } from '@/hooks/useData';
+import { MeasureCar } from '@/types/measures';
 
 type ParamType = 'brand' | 'model' | 'year' | 'version';
 
-const brands = ["Michelin", "Pirelli", "Goodyear", "Bridgestone", "Continental"];
-const models = ["Pilot Sport 4", "Scorpion Verde", "Eagle F1", "Turanza T005", "ContiSportContact 5"];
-const years = [2020, 2021, 2022, 2023, 2024];
-const versions = ["225/45 R17", "205/55 R16", "195/65 R15", "235/40 R18", "245/35 R19"];
-
+const styleSelect = "bg-white border border-yellow text-gray-7 text-sm rounded-lg focus:ring-yellow focus:border-yellow block w-30 p-2.5 dark:bg-yellow dark:border-yellow dark:placeholder-gray-4 dark:text-white dark:focus:ring-yellow dark:focus:border-yellow"
 
 function FindByCar() {
-const [measures, setMeasures] = useState<{ brand: string; model: string; year: string, version: string }>({
+  const [measures, setMeasures] = useState<MeasureCar>({
     brand: '',
     model: '',
     year: '',
     version: ''
   });
-
+  
+  const models = useMemo(() => measures?.brand && Object.keys(getModels(measures?.brand)), [measures?.brand]);
+  const years = useMemo(() => measures?.model && Object.keys(getYears(measures)), [measures?.model]);
+  const versions = useMemo(() => measures?.model && Object.keys(getVersions(measures)), [measures?.year]);
+  
   const handleChange = (value: string, param: ParamType) => {
     setMeasures(prevState => ({
       ...prevState,
@@ -24,12 +27,9 @@ const [measures, setMeasures] = useState<{ brand: string; model: string; year: s
 
   };
 
-
-  const styleSelect = "bg-white border border-yellow text-gray-7 text-md rounded-lg focus:ring-yellow focus:border-yellow block w-30 p-2.5 dark:bg-yellow dark:border-yellow dark:placeholder-gray-4 dark:text-white dark:focus:ring-yellow dark:focus:border-yellow"
-
   return (
-      <div className='w-auto flex w-full items-center justify-center lg:gap-2 gap-1'>
-        <form className="flex flex-row gap-2">
+      <div className='flex sm:flex lg:flex items-center justify-start lg:gap-2 mb-1 gap-1'>
+        <form className="flex flex-row flex-wrap gap-2">
           <select 
             id="brands" 
             className={styleSelect}
@@ -37,7 +37,8 @@ const [measures, setMeasures] = useState<{ brand: string; model: string; year: s
               handleChange(e?.target?.value, 'brand');
             }}
           >
-            {brands?.map((brand) => 
+            <option value=''>MARCA</option>
+            {brands?.map(({brand}) => 
               <option
                 key={brand}
                 value={brand}
@@ -53,7 +54,8 @@ const [measures, setMeasures] = useState<{ brand: string; model: string; year: s
               handleChange(e?.target?.value, 'model');
             }}
           >
-            {models?.map((model) => 
+            <option value=''>MODELO</option>
+            {measures?.brand && models?.map((model) => 
               <option
                 key={model}
                 value={model}
@@ -69,7 +71,8 @@ const [measures, setMeasures] = useState<{ brand: string; model: string; year: s
               handleChange(e?.target?.value, 'year');
             }}
           >
-            {years?.map((year) => 
+            <option value=''>ANO</option>
+            {measures?.model && years?.map((year) => 
               <option
                 key={year}
                 value={year}
@@ -85,7 +88,8 @@ const [measures, setMeasures] = useState<{ brand: string; model: string; year: s
               handleChange(e?.target?.value, 'version');
             }}
           >
-            {versions?.map((version) => 
+            <option value=''>VERSÃO</option>
+            {measures?.year && versions?.map((version) => 
               <option
                 key={version}
                 value={version}

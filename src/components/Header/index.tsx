@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import CustomSelect from "./CustomSelect";
 import { menuData } from "./menuData";
 import Dropdown from "./Dropdown";
 import { useAppSelector } from "@/redux/store";
@@ -9,16 +8,20 @@ import { useSelector } from "react-redux";
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
-import FindByMeasure from "../Switch/FindByMeasure";
 import useIsMobile from "@/hooks/useIsMobile";
 import Switch from "../Switch";
+import SwitchMobile from "../Switch/SwitchMobile";
+import CustomSelect from "./CustomSelect";
+import Search from "./Search";
+
 
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
   const { openCartModal } = useCartModalContext();
   const isMobile = useIsMobile();
-  const [selectedOption, setSelectedOption] = useState(isMobile ? null : "medida");
 
 
   const product = useAppSelector((state) => state.cartReducer.items);
@@ -43,27 +46,35 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 w-full z-9999 bg-white transition-all ease-in-out duration-300 ${
+      className={`left-0 top-0 w-full z-9999 bg-white transition-all ease-in-out duration-300 ${
         stickyMenu && "shadow"
       }`}
     >
-      <div className="flex flex-col max-w-[1170px] mx-auto  px-4 sm:px-7.5 xl:px-0">
+      <div className="flex flex-col max-w-[1170px] max-w-[1170px] mx-auto px-4 sm:px-7.5 xl:px-0">
         {/* <!-- header top start --> */}
         <div
-          className={`flex flex-row lg:flex-nowrap  justify-around gap-5 items-start lg:items-center xl:justify-between ease-out duration-200 ${
+          className={`flex flex-row lg:flex-nowrap  justify-between gap-5 items-center lg:items-center xl:justify-between ease-out duration-200 ${
             stickyMenu ? "py-4" : "py-6"
           }`}
         >
           {/* <!-- header LOGO --> */}
-          <div className="w-auto bg-yellow p-2 rounded  sm:flex-row flex sm:justify-between sm:items-center gap-5 sm:gap-10">
-            <Link  href="/">
+          <div className="w-auto sm:flex-row flex sm:justify-between sm:items-center gap-5 sm:gap-10">
+            <Link className="bg-yellow p-2 rounded" href="/">
               <Image
                 src="/images/logo/logo.png"
                 alt="Logo"
-                width={isMobile ? 200 : 350}
+                width={isMobile ? 200 : 300}
                 height={40}
               />
             </Link>
+
+            {!isMobile && (
+              <Search
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+              />
+            )}
+
           </div>
 
           {/* <!-- header CART and OPTIONS --> */}
@@ -161,6 +172,25 @@ const Header = () => {
                 </button>
               </div>
 
+              {isMobile && (
+                <div>
+                  <button onClick={() => setOpenSearch((prevValue) => !prevValue)}>
+                    <svg
+                      className="fill-current"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="black"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.2687 15.6656L12.6281 11.8969C14.5406 9.28123 14.3437 5.5406 11.9531 3.1781C10.6875 1.91248 8.99995 1.20935 7.19995 1.20935C5.39995 1.20935 3.71245 1.91248 2.44683 3.1781C-0.168799 5.79373 -0.168799 10.0687 2.44683 12.6844C3.71245 13.95 5.39995 14.6531 7.19995 14.6531C8.91558 14.6531 10.5187 14.0062 11.7843 12.8531L16.4812 16.65C16.5937 16.7344 16.7343 16.7906 16.875 16.7906C17.0718 16.7906 17.2406 16.7062 17.3531 16.5656C17.5781 16.2844 17.55 15.8906 17.2687 15.6656ZM7.19995 13.3875C5.73745 13.3875 4.38745 12.825 3.34683 11.7844C1.20933 9.64685 1.20933 6.18748 3.34683 4.0781C4.38745 3.03748 5.73745 2.47498 7.19995 2.47498C8.66245 2.47498 10.0125 3.03748 11.0531 4.0781C13.1906 6.2156 13.1906 9.67498 11.0531 11.7844C10.0406 12.825 8.66245 13.3875 7.19995 13.3875Z"
+                        fill=""
+                      />
+                    </svg>
+                  </button>
+                </div>
+              )}
               {/* <!-- Hamburger Toggle BTN --> */}
               <button
                 id="Toggle"
@@ -204,33 +234,44 @@ const Header = () => {
               {/* //   <!-- Hamburger Toggle BTN --> */}
             </div>
           </div>
-        </div>
         {/* <!-- header top end --> */}
-      </div>
+        </div>
 
-      <div className="border-t border-gray-3">
-        <div className="max-w-[1170px] mx-auto px-4 sm:px-7.5 xl:px-0">
-          <div className="flex items-center justify-between">
+        {openSearch && isMobile && (
+          <Search
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+        )}
+
+        {!isMobile && (
+          <div >
+            <Switch />
+          </div>
+        )}
+
+        <div className="border-t border-gray-3">
+          <div className="flex flex-row items-center justify-between max-w-[1170px] mx-auto px-4 sm:px-7.5 xl:px-0">
             {/* <!--=== Main Nav Start ===--> */}
             <div
-              className={`w-[288px] absolute right-4 top-full xl:static xl:w-auto h-0 xl:h-auto invisible xl:visible xl:flex items-center justify-between ${
+              className={`w-[288px] absolute right-4 top-25 xl:static xl:w-auto h-0 xl:h-auto invisible xl:visible xl:flex items-center justify-between ${
                 navigationOpen &&
-                `!visible bg-white shadow-lg border border-gray-3 !h-auto max-h-[400px] overflow-y-scroll rounded-md p-5`
+                `!visible bg-white shadow-lg z-50 border border-gray-3 !h-auto max-h-[400px] overflow-y-scroll rounded-md p-5`
               }`}
-              >
+            >
               {/* <!-- Main Nav Start --> */}
               <nav>
                 <ul className="flex xl:items-center flex-col xl:flex-row gap-5 xl:gap-6">
                   {menuData.map((menuItem, i) =>
                     menuItem.submenu ? (
                       <Dropdown
-                      key={i}
-                      menuItem={menuItem}
-                      stickyMenu={stickyMenu}
+                        key={i}
+                        menuItem={menuItem}
+                        stickyMenu={stickyMenu}
                       />
                     ) : (
                       <li
-                      key={i}
+                        key={i}
                         className="group relative before:w-0 before:h-[3px] before:bg-yellow before:absolute before:left-0 before:top-0 before:rounded-b-[3px] before:ease-out before:duration-200 hover:before:w-full "
                       >
                         <Link
@@ -250,17 +291,13 @@ const Header = () => {
             </div>
             {/* // <!--=== Main Nav End ===--> */}
 
-            {/* <!-- divider --> */}
-            <span className="hidden xl:block w-px h-7.5 bg-gray-4"></span>
-
-            {!isMobile && <Switch
-              selectedOption={selectedOption}
-              setSelectedOption={setSelectedOption}
-              isMobile={isMobile}
-            />}
+            {isMobile && <SwitchMobile />}
             {/* // <!--=== Searchfor measure or car ===--> */}
           </div>
         </div>
+
+
+        {/* {!isMobile && ()} */}
       </div>
     </header>
   );
