@@ -2,6 +2,18 @@ import { ServiceItemT } from "@/types/serviceItem";
 
 const serviceData: ServiceItemT[] = [
   {
+    id: "pneus-novos",
+    title: "Pneus novos",
+    img: "/images/blog/blog-01.jpg",
+    description: 'aaaaaaaaaaaaaaaaaaaa'
+  },
+  {
+    id: "recapagem",
+    title: "Recapagem",
+    img: "/images/blog/blog-01.jpg",
+    description: 'aaaaaaaaaaaaaaaaaaaa'
+  },
+  {
     id: "alinhamento",
     title: "Alinhamento",
     img: "/images/blog/blog-01.jpg",

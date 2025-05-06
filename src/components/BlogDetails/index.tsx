@@ -11,7 +11,7 @@ const BlogDetails = ({title}) => {
           <div className="rounded-[10px] overflow-hidden mb-7.5">
             <Image
               className="rounded-[10px]"
-              src="/images/blog/blog-details-01.jpg"
+              src="/images/empresa/empresa-minas.jpg"
               alt="details"
               width={750}
               height={477}
@@ -24,10 +24,12 @@ const BlogDetails = ({title}) => {
             </h2>
 
             <p className="mb-6 font-medium text-md xl:text-lg">
-              A AM Pneus tem mais de 30 anos de tradição em serviços e produtos automotivos na região sul fluminense e no município de Pouso Alto/MG. Trabalhamos com pneus Continental e Bridgestone, oferecendo atendimento especializado com profissionais treinados para te auxiliar na escolha dos melhores pneus novos e recapados, além da realização de serviços automotivos essenciais.
+              Com mais de 30 anos de atuação, a <strong>AM Pneus</strong> é uma empresa consolidada no mercado, reconhecida pela excelência no atendimento e por seu compromisso com a qualidade. Referência em <strong>recapagem de pneus</strong> no Sul-Fluminense, também atua na <strong>venda de pneus novos</strong>, representando marcas renomadas como <strong>Bridgestone</strong> e <strong>Continental</strong>.
+              Conta com um dos <strong>maiores Truck Centers da região</strong>, localizado em <strong>Barra Mansa (RJ)</strong>, onde também está sua unidade de recapagem. Expandindo sua presença, inaugurou recentemente um moderno <strong>Truck e Auto Center</strong> em <strong>Santana do Capivari (Pouso Alto/MG)</strong>, pronto para atender autônomos e grandes frotas.
+              A AM Pneus segue firme em seu compromisso com a <strong>inovação, confiança e excelência no setor de transporte.</strong>
             </p>
 
-            <div className="my-7.5">
+            {/* <div className="my-7.5">
               <h6 className="font-medium text-dark text-lg xl:text-[26px] xl:leading-[34px] mb-6">
               Atendemos veículos de passeio, caminhonetes, caminhões, ônibus e vans, oferecendo serviços como:
               </h6>
@@ -47,7 +49,7 @@ const BlogDetails = ({title}) => {
 
             <p className="mb-6 font-medium text-md xl:text-lg">
             Além disso, oferecemos atendimento especializado para frotas, garantindo as melhores soluções em pneus Continental e Bridgestone para reduzir o desgaste irregular e proporcionar mais economia e segurança para você!
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

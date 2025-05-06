@@ -32,7 +32,8 @@ const Footer = () => {
                     />
                   </svg>
                 </span>
-                Rua la que eu nao sei qual e mas fica em uma cidade de minas
+                Rua Santa Rita, 4 - Santana Do Capivari
+                Pouso Alto - MG
               </li>
 
               <li>
@@ -61,7 +62,7 @@ const Footer = () => {
                       fill="#1C1C1C"
                     />
                   </svg>
-                  (24) 3323-4058
+                  (35) 3364-7414 e (35) 3364-7417
                 </a>
               </li>
 
@@ -81,7 +82,7 @@ const Footer = () => {
                       fill="#1C1C1C"
                     />
                   </svg>
-                  suporte@examplo.com
+                  ampneusminas@gmail.com
                 </a>
               </li>
             </ul>
@@ -205,7 +206,7 @@ const Footer = () => {
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-5 flex-wrap items-center justify-between">
             <p className="text-dark font-medium">
-              &copy; {year}. Todos os direitos reservados por Laísa Rio.
+              &copy; {year} - Feito com ❤️ por Laísa Rio Verde.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
