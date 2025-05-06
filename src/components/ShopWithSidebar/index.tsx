@@ -3,18 +3,19 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import CustomSelect from "./CustomSelect";
 import CategoryDropdown from "./CategoryDropdown";
-import GenderDropdown from "./GenderDropdown";
-import SizeDropdown from "./SizeDropdown";
-import ColorsDropdwon from "./ColorsDropdwon";
-import PriceDropdown from "./PriceDropdown";
-import shopData from "../Shop/shopData";
+import BrandsDropdown from "./GenderDropdown";
 import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
+import dadosPneus from "../../../data/dadosPneus.json";
+import { usePathname } from "next/navigation";
 
 const ShopWithSidebar = () => {
   const [productStyle, setProductStyle] = useState("grid");
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [page, setPage] = useState(0);
+  const pathname = usePathname()
+  console.log(pathname)
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -25,56 +26,36 @@ const ShopWithSidebar = () => {
   };
 
   const options = [
-    { label: "Latest Products", value: "0" },
-    { label: "Best Selling", value: "1" },
-    { label: "Old Products", value: "2" },
+    { label: "Todos", value: "0" },
+    { label: "Mais vendidos", value: "1" },
   ];
 
   const categories = [
     {
-      name: "Desktop",
-      products: 10,
-      isRefined: true,
-    },
-    {
-      name: "Laptop",
-      products: 12,
-      isRefined: false,
-    },
-    {
-      name: "Monitor",
+      name: "Carros",
       products: 30,
       isRefined: false,
     },
     {
-      name: "UPS",
-      products: 23,
-      isRefined: false,
-    },
-    {
-      name: "Phone",
+      name: "Vans",
       products: 10,
-      isRefined: false,
+      isRefined: true,
     },
     {
-      name: "Watch",
-      products: 13,
+      name: "Ônibus / Caminhões",
+      products: 12,
       isRefined: false,
     },
   ];
 
-  const genders = [
+  const brands = [
     {
-      name: "Men",
+      name: "Bridgestone",
       products: 10,
     },
     {
-      name: "Women",
+      name: "Continetal",
       products: 23,
-    },
-    {
-      name: "Unisex",
-      products: 8,
     },
   ];
 
@@ -97,13 +78,29 @@ const ShopWithSidebar = () => {
     };
   });
 
+  const paginate = () => {
+    const itemsPerPage = 9;
+    const numberOfPages = Math.ceil(dadosPneus?.length / itemsPerPage)
+
+    return Array.from({length: numberOfPages}, (_, index) => {
+      const start = index * itemsPerPage;
+      return dadosPneus.slice(start, start + itemsPerPage)
+    })
+  };
+
+  const pneus = paginate()
+
+  const handlePage = (newPage: number) => {
+    setPage(newPage)
+  }
+
   return (
     <>
       <Breadcrumb
-        title={"Nossos produtos"}
-        pages={["produtos"]}
+        title={"Conheça nossos pneus!"}
+        pages={["pneus"]}
       />
-      <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-[#f3f4f6]">
+      <section className="overflow-hidden relative pb-20 pt-5 lg:pt-10 xl:pt-14 bg-[#f3f4f6]">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-7.5">
             {/* <!-- Sidebar Start --> */}
@@ -151,8 +148,8 @@ const ShopWithSidebar = () => {
                   {/* <!-- filter box --> */}
                   <div className="bg-white shadow-1 rounded-lg py-4 px-5">
                     <div className="flex items-center justify-between">
-                      <p>Filters:</p>
-                      <button className="text-blue">Clean All</button>
+                      <p>Filtros:</p>
+                      <button className="text-gray-5">Limpar todos</button>
                     </div>
                   </div>
 
@@ -160,16 +157,7 @@ const ShopWithSidebar = () => {
                   <CategoryDropdown categories={categories} />
 
                   {/* <!-- gender box --> */}
-                  <GenderDropdown genders={genders} />
-
-                  {/* // <!-- size box --> */}
-                  <SizeDropdown />
-
-                  {/* // <!-- color box --> */}
-                  <ColorsDropdwon />
-
-                  {/* // <!-- price range box --> */}
-                  <PriceDropdown />
+                  <BrandsDropdown brands={brands} />
                 </div>
               </form>
             </div>
@@ -184,8 +172,8 @@ const ShopWithSidebar = () => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing <span className="text-dark">9 of 50</span>{" "}
-                      Products
+                      Mostrando <span className="text-dark">8 de {dadosPneus?.length}</span>{" "}
+                      Produtos
                     </p>
                   </div>
 
@@ -196,9 +184,9 @@ const ShopWithSidebar = () => {
                       aria-label="button for product grid tab"
                       className={`${
                         productStyle === "grid"
-                          ? "bg-blue border-blue text-white"
+                          ? "bg-gray-5 border-gray-5 text-white"
                           : "text-dark bg-gray-1 border-gray-3"
-                      } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                      } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-gray-5 hover:border-gray-5 hover:text-white`}
                     >
                       <svg
                         className="fill-current"
@@ -240,9 +228,9 @@ const ShopWithSidebar = () => {
                       aria-label="button for product list tab"
                       className={`${
                         productStyle === "list"
-                          ? "bg-blue border-blue text-white"
+                          ? "bg-gray-5 border-gray-5 text-white"
                           : "text-dark bg-gray-1 border-gray-3"
-                      } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                      } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-gray-5 hover:border-gray-5 hover:text-white`}
                     >
                       <svg
                         className="fill-current"
@@ -278,7 +266,7 @@ const ShopWithSidebar = () => {
                     : "flex flex-col gap-7.5"
                 }`}
               >
-                {shopData.map((item, key) =>
+                {pneus[page].map((item, key) =>
                   productStyle === "grid" ? (
                     <SingleGridItem item={item} key={key} />
                   ) : (
@@ -292,13 +280,16 @@ const ShopWithSidebar = () => {
               <div className="flex justify-center mt-15">
                 <div className="bg-white shadow-1 rounded-md p-2">
                   <ul className="flex items-center">
+
+                      {/* Seta esquerda */}
                     <li>
                       <button
                         id="paginationLeft"
-                        aria-label="button for pagination left"
+                        aria-label="Botão página anterior"
                         type="button"
-                        disabled
+                        disabled={page === 0}
                         className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px disabled:text-gray-4"
+                        onClick={() => handlePage(page - 1)}
                       >
                         <svg
                           className="fill-current"
@@ -316,75 +307,27 @@ const ShopWithSidebar = () => {
                       </button>
                     </li>
 
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] bg-blue text-white hover:text-white hover:bg-blue"
-                      >
-                        1
-                      </a>
-                    </li>
+                    {pneus?.map((_, index) => (
+                      <li>
+                        <button
+                          className={`flex py-1.5 px-3.5 mr-1 duration-200 rounded-[3px] ${page === index && "bg-gray-5 text-white"} hover:text-white hover:bg-gray-5`}
+                          onClick={() => handlePage(index)}
+                        >
+                         {index + 1} 
+                        </button>
+                      </li>
+                    ))}
 
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
-                      >
-                        2
-                      </a>
-                    </li>
 
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
-                      >
-                        3
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
-                      >
-                        4
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
-                      >
-                        5
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
-                      >
-                        ...
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
-                      >
-                        10
-                      </a>
-                    </li>
+                    {/* Seta direita */}
 
                     <li>
                       <button
-                        id="paginationLeft"
-                        aria-label="button for pagination left"
+                        id="paginationRight"
+                        aria-label="Botão próxima página"
                         type="button"
-                        className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] hover:text-white hover:bg-blue disabled:text-gray-4"
+                        className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] hover:text-white hover:bg-gray-5 disabled:text-gray-4"
+                        onClick={() => handlePage(page + 1)}
                       >
                         <svg
                           className="fill-current"

@@ -1,19 +1,18 @@
-import BlogDetails from "@/components/BlogDetails";
 import React from "react";
-
+import ShopWithSidebar from "@/components/ShopWithSidebar";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Encontre seu pneu",
-  description: "Página com tabela para encontrar seu pneu.",
-  // other metadata
+  title: "Pneus",
+  description: "Catálogo de pneus que vendemos",
 };
 
-const BlogDetailsPage = () => {
+const PneusPage = () => {
   return (
     <main>
-      <BlogDetails title="Encontre seu pneu" />
+      <ShopWithSidebar />
     </main>
   );
 };
 
-export default BlogDetailsPage;
+export default PneusPage;

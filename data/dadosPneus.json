@@ -1,0 +1,1321 @@
+[
+  {
+    "id": 1,
+    "titulo": "Pneu CONTINENTAL LSU1 (Urbano) 215/75R17,5",
+    "categoria": "caminhões / ônibus",
+    "marca": "Continental",
+    "tamanho": "215/75 R17.5",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [
+        "/images/descricaoPneus/75R17.5LSUI.webp",
+        "/images/descricaoPneus/75R17.5LSUI.webp"
+      ],
+      "previews": [
+        "/images/descricaoPneus/75R17.5LSUI.webp",
+        "/images/descricaoPneus/75R17.5LSUI.webp"
+      ]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 215 mm e um perfil de 75, com aro 17.5. Ele é indicado para caminhões e ônibus. Seu índice de velocidade é M, suportando até 130 km/h, e o índice de carga é 126/124, com capacidade para 1.700 kg e 1.600 kg, respectivamente. O código do fabricante é 04121830000. Este pneu é sem câmara de ar e possui 12 lonas de capacidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Linha", "valor": "caminhões / ônibus" },
+        { "caracteristica": "Modelo", "valor": "04121830000" },
+        { "caracteristica": "Tamanho", "valor": "215/75 R17.5" },
+        {
+          "caracteristica": "Índice de carga",
+          "valor": "126/124 (1.700 kg/ 1.600 kg)"
+        },
+        { "caracteristica": "Índice de velocidade", "valor": "M" },
+        { "caracteristica": "Tipo de serviço", "valor": "ST" },
+        { "caracteristica": "É run flat", "valor": "Não" },
+        { "caracteristica": "Tipo de terreno", "valor": "HT" },
+        { "caracteristica": "Tipo de construção", "valor": "Radial" },
+        { "caracteristica": "Relação de aspecto do pneu", "valor": "75" },
+        { "caracteristica": "Largura de secção", "valor": "215 mm" },
+        { "caracteristica": "Diâmetro da roda", "valor": "17,5" },
+        { "caracteristica": "Resistência ao rolamento", "valor": "E" },
+        { "caracteristica": "Aderência em pista molhada", "valor": "B" },
+        { "caracteristica": "Ruído externo", "valor": "Ruído externo" },
+        { "caracteristica": "Tipo de unidade", "valor": "Unidade" }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Pneu CONTINENTAL LA3 215/75R17,5",
+    "categoria": "caminhões / ônibus",
+    "marca": "Continental",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 215 mm e um perfil de 75, com aro 17.5. Indicado para caminhões e ônibus.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "LA3" },
+        { "caracteristica": "Tamanho", "valor": "215/75 R17.5" },
+        {
+          "caracteristica": "Índice de carga",
+          "valor": "126/124 (1.700 kg simples / 1.600 kg dupla)"
+        },
+        { "caracteristica": "Índice de velocidade", "valor": "M (130 km/h)" },
+        {
+          "caracteristica": "Tipo de serviço",
+          "valor": "Regional, adequado para todas as posições em caminhões leves e micro-ônibus"
+        },
+        { "caracteristica": "Run Flat", "valor": "Não especificado" },
+        { "caracteristica": "Tipo de terreno", "valor": "HT" },
+        { "caracteristica": "Tipo de construção", "valor": "Radial" },
+        { "caracteristica": "Relação de aspecto do pneu", "valor": "75" },
+        { "caracteristica": "Largura de secção", "valor": "215 mm" },
+        { "caracteristica": "Diâmetro da roda", "valor": "17,5" }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Pneu CONTINENTAL LA3 (Direcional) 235/75R17,5",
+    "categoria": "caminhões / ônibus",
+    "marca": "Continental",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 235 mm e um perfil de 75, com aro 17.5. Indicado para caminhões e ônibus, com desenho direcional.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "LA3 (Direcional)" },
+        { "caracteristica": "Tamanho", "valor": "235/75 R17.5" },
+        {
+          "caracteristica": "Índice de carga",
+          "valor": "132/130 (2.000 kg em montagem simples / 1.900 kg em montagem dupla)"
+        },
+        {
+          "caracteristica": "Índice de velocidade",
+          "valor": "M (até 130 km/h)"
+        },
+        {
+          "caracteristica": "Tipo de serviço",
+          "valor": "Regional, adequado para todas as posições em caminhões leves e micro-ônibus"
+        },
+        { "caracteristica": "Run Flat", "valor": "Não especificado" },
+        {
+          "caracteristica": "Tipo de terreno",
+          "valor": "HT (Highway Terrain)"
+        },
+        { "caracteristica": "Tipo de construção", "valor": "Radial" },
+        { "caracteristica": "Relação de aspecto do pneu", "valor": "75" },
+        { "caracteristica": "Largura de secção", "valor": "235 mm" },
+        { "caracteristica": "Diâmetro da roda", "valor": "17,5 polegadas" }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Pneu CONTINENTAL HSR2 275/70R22,5",
+    "categoria": "caminhões / ônibus",
+    "marca": "Continental",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 70, com aro 22.5. Indicado para caminhões e ônibus.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HSR2" },
+        { "caracteristica": "Tamanho", "valor": "275/70 R22.5" },
+        {
+          "caracteristica": "Índice de carga",
+          "valor": "148/145 (3.150 kg simples / 2.900 kg dupla)"
+        },
+        { "caracteristica": "Índice de velocidade", "valor": "L (120 km/h)" },
+        {
+          "caracteristica": "Tipo de serviço",
+          "valor": "Regional e rodoviário, adequado para todas as posições em caminhões e ônibus"
+        },
+        { "caracteristica": "Run Flat", "valor": "Não especificado" },
+        { "caracteristica": "Tipo de terreno", "valor": "HT" },
+        { "caracteristica": "Tipo de construção", "valor": "Radial" },
+        { "caracteristica": "Relação de aspecto do pneu", "valor": "70" },
+        { "caracteristica": "Largura de secção", "valor": "275 mm" },
+        { "caracteristica": "Diâmetro da roda", "valor": "22,5" }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Pneu CONTINENTAL HS3 (Direcional) 275/80R22,5",
+    "categoria": "caminhões / ônibus",
+    "marca": "Continental",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Indicado para caminhões e ônibus, com desenho direcional.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HS3 (Direcional)" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" },
+        {
+          "caracteristica": "Índice de carga",
+          "valor": "149/146 (3.250 kg simples / 3.000 kg dupla)"
+        },
+        { "caracteristica": "Índice de velocidade", "valor": "L (120 km/h)" },
+        {
+          "caracteristica": "Tipo de serviço",
+          "valor": "Regional e rodoviário, adequado para todas as posições em caminhões e ônibus"
+        },
+        { "caracteristica": "Run Flat", "valor": "Não especificado" },
+        { "caracteristica": "Tipo de terreno", "valor": "HT" },
+        { "caracteristica": "Tipo de construção", "valor": "Radial" },
+        { "caracteristica": "Relação de aspecto do pneu", "valor": "80" },
+        { "caracteristica": "Largura de secção", "valor": "275 mm" },
+        { "caracteristica": "Diâmetro da roda", "valor": "22,5" }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "Pneu CONTINENTAL HAU3 (Urbano) 275/80R22,5",
+    "categoria": "caminhões / ônibus",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Indicado para uso urbano, proporcionando conforto e durabilidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAU3 (Urbano)" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" },
+        {
+          "característica": "Índice de carga",
+          "valor": "148/145 (3.150 kg em montagem simples / 2.900 kg em montagem dupla)"
+        },
+        { "característica": "Índice de velocidade", "valor": "K (110 km/h)" },
+        {
+          "característica": "Tipo de serviço",
+          "valor": "Urbano, adequado para ônibus de transporte público"
+        },
+        { "característica": "Run Flat", "valor": "Não especificado" },
+        { "característica": "Tipo de terreno", "valor": "Urbano" },
+        { "característica": "Tipo de construção", "valor": "Radial" },
+        { "característica": "Relação de aspecto do pneu", "valor": "80" },
+        { "característica": "Largura de secção", "valor": "275 mm" },
+        { "característica": "Diâmetro da roda", "valor": "22,5 polegadas" }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "Pneu CONTINENTAL HAC3 (Misto) 275/80R22,5",
+    "categoria": "Aplicações mistas (canavieiro/madeireiro)​",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Modelo misto, ideal para uso em terrenos mistos, oferecendo resistência e desempenho em diversas condições.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAC3 (Misto)" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" },
+        {
+          "característica": "Índice de carga",
+          "valor": "149/146 (3.250 kg em montagem simples / 3.000 kg em montagem dupla)"
+        },
+        { "característica": "Índice de velocidade", "valor": "K (110 km/h)" },
+        {
+          "característica": "Tipo de serviço",
+          "valor": "Misto, adequado para todas as posições em operações on/off-road"
+        },
+        { "característica": "Run Flat", "valor": "Não" },
+        { "característica": "Tipo de terreno", "valor": "Misto" },
+        { "característica": "Tipo de construção", "valor": "Radial" },
+        { "característica": "Relação de aspecto do pneu", "valor": "80" },
+        { "característica": "Largura de secção", "valor": "275 mm" },
+        { "característica": "Diâmetro da roda", "valor": "22,5 polegadas" }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "Pneu CONTINENTAL HDC1+ (Misto) 275/80R22,5",
+    "categoria": "Aplicações mistas (uso em eixos de tração)",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Versão melhorada para uso misto, oferecendo alta performance tanto em rodovias quanto em terrenos mais difíceis.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HDC1+ (Misto)" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" },
+        {
+          "característica": "Índice de carga",
+          "valor": "152/148 (3.550 kg em montagem simples / 3.150 kg em montagem dupla)"
+        },
+        { "característica": "Índice de velocidade", "valor": "K (110 km/h)" },
+        {
+          "característica": "Tipo de serviço",
+          "valor": "Misto, adequado para eixos de tração em operações on/off-road"
+        },
+        { "característica": "Run Flat", "valor": "Não especificado" },
+        { "característica": "Tipo de terreno", "valor": "Misto" },
+        { "característica": "Tipo de construção", "valor": "Radial" },
+        { "característica": "Relação de aspecto do pneu", "valor": "80" },
+        { "característica": "Largura de secção", "valor": "275 mm" },
+        { "característica": "Diâmetro da roda", "valor": "22,5 polegadas" }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "titulo": "Pneu CONTINENTAL HD3 (Tração) 275/80R22,5",
+    "categoria": "caminhões / ônibus",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Ideal para eixos de tração, oferecendo excelente aderência e durabilidade em diversas condições de terreno.",
+      "dadosTecnicos": [
+        {
+          "característica": "Índice de carga",
+          "valor": "149/146 (3.250 kg em montagem simples / 3.000 kg em montagem dupla)"
+        },
+        { "característica": "Índice de velocidade", "valor": "L (120 km/h)" },
+        {
+          "característica": "Tipo de serviço",
+          "valor": "Regional e rodoviário, adequado para eixos de tração"
+        },
+        { "característica": "Run Flat", "valor": "Não especificado" },
+        { "característica": "Tipo de terreno", "valor": "Rodoviário" },
+        { "característica": "Tipo de construção", "valor": "Radial" },
+        { "característica": "Relação de aspecto do pneu", "valor": "80" },
+        { "característica": "Largura de secção", "valor": "275 mm" },
+        { "característica": "Diâmetro da roda", "valor": "22,5 polegadas" }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "titulo": "Pneu CONTINENTAL HTR1 (Direcional) 295/80R22,5",
+    "categoria": "caminhões / ônibus",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Modelo direcional, indicado para veículos de carga e ônibus, proporcionando excelente aderência em rodovias.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HTR1 (Direcional)" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" },
+        {
+          "característica": "Índice de carga",
+          "valor": "152/148 (3.550 kg em montagem simples / 3.150 kg em montagem dupla)"
+        },
+        { "característica": "Índice de velocidade", "valor": "K (110 km/h)" },
+        {
+          "característica": "Tipo de serviço",
+          "valor": "Rodoviário, adequado para eixos direcionais e de reboque"
+        },
+        { "característica": "Run Flat", "valor": "Não especificado" },
+        { "característica": "Tipo de terreno", "valor": "Rodoviário" },
+        { "característica": "Tipo de construção", "valor": "Radial" },
+        { "característica": "Relação de aspecto do pneu", "valor": "80" },
+        { "característica": "Largura de secção", "valor": "295 mm" },
+        { "característica": "Diâmetro da roda", "valor": "22,5 polegadas" }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "titulo": "Pneu CONTINENTAL HS3 (Direcional) 295/80R22,5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Direcional, ideal para eixos de direção de caminhões e ônibus, com ótima performance em longas distâncias.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HS3 (Direcional)" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "titulo": "Pneu CONTINENTAL HSL2 295/80R22,5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. O HSL2 oferece excelente desempenho e resistência, indicado para transporte de cargas pesadas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HSL2" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "titulo": "Pneu CONTINENTAL HAU3 (Urbano) 295/80R22,5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Indicado para uso urbano, com alta resistência e desempenho para veículos de transporte coletivo e urbano.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAU3 (Urbano)" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "titulo": "Pneu CONTINENTAL HAC3 (Misto) 295/80R22,5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Modelo misto, oferecendo versatilidade para terrenos tanto urbanos quanto mais difíceis.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAC3 (Misto)" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "titulo": "Pneu CONTINENTAL HAC3 (Misto) 295/80R22,5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Versão melhorada para uso misto, ideal para caminhões e ônibus que circulam em diferentes tipos de terrenos.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HDC1+ (Misto)" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "titulo": "Pneu CONTINENTAL HAC3 (Misto) 295/80R22,5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Indicados para eixos de tração, proporcionando excelente desempenho em condições severas de trabalho.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HD3 (Tração)" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "titulo": "Pneu CONTINENTAL HSR2 1000R20",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 1000 mm e aro 20. Modelo para eixos de direção, com alta resistência e durabilidade para veículos de carga pesada.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HSR2" },
+        { "caracteristica": "Tamanho", "valor": "1000 R20" }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 2 175/70R14",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 175 mm e um perfil de 70, com aro 14. Ideal para carros de passeio, com excelente performance e durabilidade em rodovias e cidades.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "POWER CONTACT 2" },
+        { "caracteristica": "Tamanho", "valor": "175/70 R14" }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "titulo": "Pneu CONTINENTAL POWERCONTACT 185/60R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 185 mm e um perfil de 60, com aro 15. Ideal para veículos de passeio, oferecendo boa aderência e economia de combustível.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "POWERCONTACT" },
+        { "caracteristica": "Tamanho", "valor": "185/60 R15" }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "titulo": "Pneu CONTINENTAL POWERCONTACT2 185/65R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 185 mm e um perfil de 65, com aro 15. Oferece alta durabilidade e segurança, ideal para veículos de passeio em ambientes urbanos e rodovias.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "POWERCONTACT2" },
+        { "caracteristica": "Tamanho", "valor": "185/65 R15" }
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 195/55R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 195 mm e um perfil de 55, com aro 16. Destinado a carros de passeio, o POWER CONTACT oferece excelente equilíbrio entre desempenho e conforto.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "POWER CONTACT" },
+        { "caracteristica": "Tamanho", "valor": "195/55 R16" }
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "titulo": "Pneu CONTINENTAL VANCO 195/70R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 195 mm e um perfil de 70, com aro 15. Indicado para veículos comerciais e utilitários, com foco em durabilidade e estabilidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "VANCO" },
+        { "caracteristica": "Tamanho", "valor": "195/70 R15" }
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "titulo": "Pneu CONTINENTAL VANCO 195/75R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 195 mm e um perfil de 75, com aro 16. Modelo voltado para veículos utilitários e comerciais, com foco em resistência e confiabilidade para viagens longas e cargas pesadas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "VANCO" },
+        { "caracteristica": "Tamanho", "valor": "195/75 R16" }
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 205/55R17",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 205 mm e um perfil de 55, com aro 17. Indicado para veículos de passeio, com excelente desempenho e estabilidade, especialmente em pistas secas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "POWER CONTACT" },
+        { "caracteristica": "Tamanho", "valor": "205/55 R17" }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 2 205/55R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 205 mm e um perfil de 55, com aro 16. Ideal para carros de passeio, oferecendo ótimo desempenho em várias condições climáticas e boa durabilidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "POWER CONTACT 2" },
+        { "caracteristica": "Tamanho", "valor": "205/55 R16" }
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "titulo": "Pneu CONTINENTAL PREMIUM CONTACT 2 205/60R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": [],
+      "previews": []
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 205 mm e um perfil de 60, com aro 15. Projetado para veículos de passeio, o PREMIUM CONTACT 2 oferece ótimo desempenho em molhado e reduz o consumo de combustível.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "PREMIUM CONTACT 2" },
+        { "caracteristica": "Tamanho", "valor": "205/60 R15" }
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT AT 205/60R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20560R16CrossContactAT.webp"],
+      "previews": ["/images/descricaoPneus/20560R16CrossContactAT.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 205 mm e um perfil de 60, com aro 16. Indicado para SUVs e veículos de passeio, o CROSSCONTACT AT oferece uma combinação de boa performance em estrada e off-road.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CROSSCONTACT AT" },
+        { "caracteristica": "Tamanho", "valor": "205/60 R16" }
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT AT 205/65R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20565R15CrossContactAT.webp"],
+      "previews": ["/images/descricaoPneus/20565R15CrossContactAT.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 205 mm e um perfil de 65, com aro 15. Ideal para SUVs e veículos de passeio, o CROSSCONTACT AT é projetado para desempenho tanto na estrada quanto em terrenos off-road.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CROSSCONTACT AT" },
+        { "caracteristica": "Tamanho", "valor": "205/65 R15" }
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "titulo": "Pneu CONTINENTAL VANCO 205/70R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20570R15Vanco.webp"],
+      "previews": ["/images/descricaoPneus/20570R15Vanco.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 205 mm e um perfil de 70, com aro 15. Ideal para vans e veículos comerciais, o VANCO oferece excelente durabilidade e confiabilidade em uso urbano e rodoviário.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "VANCO" },
+        { "caracteristica": "Tamanho", "valor": "205/70 R15" }
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT LX2 225/65R17",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/22565R17CrossContactLX2.webp"],
+      "previews": ["/images/descricaoPneus/22565R17CrossContactLX2.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 225 mm e um perfil de 65, com aro 17. Indicado para SUVs, o CROSSCONTACT LX2 oferece excelente aderência em terrenos mistos e alta durabilidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CROSSCONTACT LX2" },
+        { "caracteristica": "Tamanho", "valor": "225/65 R17" }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "titulo": "Pneu CONTINENTAL VANCO 225/70R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/22570R15Vanco.webp"],
+      "previews": ["/images/descricaoPneus/22570R15Vanco.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 225 mm e um perfil de 70, com aro 15. Ideal para vans e veículos comerciais, o VANCO é projetado para fornecer durabilidade e resistência a cargas pesadas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "VANCO" },
+        { "caracteristica": "Tamanho", "valor": "225/70 R15" }
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "titulo": "Pneu CONTINENTAL VANCO 225/75R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/22575R16Vanco.webp"],
+      "previews": ["/images/descricaoPneus/22575R16Vanco.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 225 mm e um perfil de 75, com aro 16. Ideal para vans e veículos comerciais, o VANCO é perfeito para suportar cargas pesadas e proporcionar maior estabilidade em longas distâncias.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "VANCO" },
+        { "caracteristica": "Tamanho", "valor": "225/75 R16" }
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT LX2 235/70R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/23570R16CrossContactLX2.webp"],
+      "previews": ["/images/descricaoPneus/23570R16CrossContactLX2.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 235 mm e um perfil de 70, com aro 16. Ideal para SUVs e crossovers, o CROSSCONTACT LX2 oferece excelente tração em terrenos mistos e boa estabilidade em alta velocidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CROSSCONTACT LX2" },
+        { "caracteristica": "Tamanho", "valor": "235/70 R16" }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "titulo": "Pneu CONTINENTAL CROSS CONTACT 265/70R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/26570R16CrossContact.webp"],
+      "previews": ["/images/descricaoPneus/26570R16CrossContact.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 265 mm e um perfil de 70, com aro 16. Indicados para SUVs e veículos off-road, o CROSS CONTACT oferece ótima aderência em terrenos difíceis e é ideal para longas viagens.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CROSS CONTACT" },
+        { "caracteristica": "Tamanho", "valor": "265/70 R16" }
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "titulo": "Pneu CONTINENTAL LSU1 215/75R17.5 (Urbano)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/21575R17.5LSU1.webp"],
+      "previews": ["/images/descricaoPneus/21575R17.5LSU1.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 215 mm e um perfil de 75, com aro 17.5. Ideal para veículos urbanos, o LSU1 oferece alto desempenho e resistência em rotas de transporte urbano e rodoviário.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "LSU1" },
+        { "caracteristica": "Tamanho", "valor": "215/75 R17.5" }
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "titulo": "Pneu CONTINENTAL LA3 215/75R17.5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/21575R17.5LA3.webp"],
+      "previews": ["/images/descricaoPneus/21575R17.5LA3.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 215 mm e um perfil de 75, com aro 17.5. O LA3 é projetado para oferecer excelente durabilidade e desempenho em veículos comerciais de transporte urbano.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "LA3" },
+        { "caracteristica": "Tamanho", "valor": "215/75 R17.5" }
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "titulo": "Pneu CONTINENTAL LA3 235/75R17.5 (Direcional)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/23575R17.5LA3Direcional.webp"],
+      "previews": ["/images/descricaoPneus/23575R17.5LA3Direcional.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 235 mm e um perfil de 75, com aro 17.5. Direcional, o LA3 proporciona tração e estabilidade excepcionais para caminhões e ônibus em diversas condições de estrada.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "LA3" },
+        { "caracteristica": "Tamanho", "valor": "235/75 R17.5" }
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "titulo": "Pneu CONTINENTAL HSR2 275/70R22.5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/27570R22.5HSR2.webp"],
+      "previews": ["/images/descricaoPneus/27570R22.5HSR2.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 70, com aro 22.5. O HSR2 é projetado para longas distâncias, oferecendo excelente tração e resistência ao desgaste, ideal para transporte rodoviário.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HSR2" },
+        { "caracteristica": "Tamanho", "valor": "275/70 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "titulo": "Pneu CONTINENTAL HS3 275/80R22.5 (Direcional)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/27580R22.5HS3Direcional.webp"],
+      "previews": ["/images/descricaoPneus/27580R22.5HS3Direcional.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Direcional, o HS3 é ideal para caminhões de transporte de carga pesada, com alta tração e durabilidade em todas as condições climáticas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HS3" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "titulo": "Pneu CONTINENTAL HAU3 275/80R22.5 (Urbano)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/27580R22.5HAU3Urbano.webp"],
+      "previews": ["/images/descricaoPneus/27580R22.5HAU3Urbano.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Urbano, o HAU3 é projetado para oferecer alto desempenho em transporte urbano e rodoviário, com durabilidade superior e resistência ao desgaste.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAU3" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "titulo": "Pneu CONTINENTAL HAC3 275/80R22.5 (Misto)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/27580R22.5HAC3Misto.webp"],
+      "previews": ["/images/descricaoPneus/27580R22.5HAC3Misto.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Misto, o HAC3 oferece alta resistência tanto em estradas pavimentadas quanto em terrenos mais difíceis, ideal para caminhões que operam em condições variáveis.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAC3" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "titulo": "Pneu CONTINENTAL HDC1+ 275/80R22.5 (Misto)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/27580R22.5HDC1PlusMisto.webp"],
+      "previews": ["/images/descricaoPneus/27580R22.5HDC1PlusMisto.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. Misto, o HDC1+ é projetado para fornecer tração superior e durabilidade, ideal para veículos comerciais que enfrentam uma variedade de superfícies.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HDC1+" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "titulo": "Pneu CONTINENTAL HD3 275/80R22.5 (Tração)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/27580R22.5HD3Tracao.webp"],
+      "previews": ["/images/descricaoPneus/27580R22.5HD3Tracao.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 275 mm e um perfil de 80, com aro 22.5. O HD3 é um pneu de tração projetado para fornecer a melhor performance em condições de terreno pesado e terrenos de difícil acesso.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HD3" },
+        { "caracteristica": "Tamanho", "valor": "275/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "titulo": "Pneu CONTINENTAL HTR1 295/80R22.5 (Direcional)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HTR1Direcional.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HTR1Direcional.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Direcional, o HTR1 é ideal para caminhões e ônibus, oferecendo alta performance e tração em rodovias e estradas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HTR1" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 45,
+    "titulo": "Pneu CONTINENTAL HS3 295/80R22.5 (Direcional)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HS3Direcional.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HS3Direcional.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Direcional, o HS3 oferece desempenho superior em rodovias e áreas de transporte de cargas pesadas, com excelente tração e resistência.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HS3" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "titulo": "Pneu CONTINENTAL HSL2 295/80R22.5",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HSL2.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HSL2.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. O HSL2 oferece excelente durabilidade e resistência, sendo ideal para veículos pesados e exigentes em termos de carga.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HSL2" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "titulo": "Pneu CONTINENTAL HAU3 295/80R22.5 (Urbano)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HAU3Urbano.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HAU3Urbano.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Urbano, o HAU3 é projetado para veículos comerciais de transporte urbano, oferecendo alta performance e resistência ao desgaste em condições adversas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAU3" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "titulo": "Pneu CONTINENTAL HAC3 295/80R22.5 (Misto)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HAC3Misto.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HAC3Misto.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Misto, o HAC3 é ideal para terrenos variados, com alto desempenho tanto em rodovias quanto em terrenos de difícil acesso.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HAC3" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "titulo": "Pneu CONTINENTAL HDC1+ 295/80R22.5 (Misto)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HDC1PlusMisto.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HDC1PlusMisto.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Misto, o HDC1+ é projetado para oferecer tração superior e durabilidade, sendo ideal para veículos comerciais em uma variedade de condições de estrada.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HDC1+" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "titulo": "Pneu CONTINENTAL HD3 295/80R22.5 (Tração)",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/29580R22.5HD3Tracao.webp"],
+      "previews": ["/images/descricaoPneus/29580R22.5HD3Tracao.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 295 mm e um perfil de 80, com aro 22.5. Tração, o HD3 é projetado para oferecer performance superior em condições de estrada difíceis, ideal para veículos pesados e de tração.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HD3" },
+        { "caracteristica": "Tamanho", "valor": "295/80 R22.5" }
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "titulo": "Pneu CONTINENTAL HSR2 1000R20",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/1000R20HSR2.webp"],
+      "previews": ["/images/descricaoPneus/1000R20HSR2.webp"]
+    },
+    "descricao": {
+      "basica": "O pneu possui uma largura de 1000 mm e um perfil adequado para aro 20. O HSR2 é ideal para longas distâncias, oferecendo alta tração e resistência ao desgaste, sendo excelente para transporte pesado e rodoviário.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "HSR2" },
+        { "caracteristica": "Tamanho", "valor": "1000 R20" }
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 2 175/70R14",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/17570R14PowerContact2.webp"],
+      "previews": ["/images/descricaoPneus/17570R14PowerContact2.webp"]
+    },
+    "descricao": {
+      "basica": "Ideal para veículos de passeio, o Power Contact 2 oferece excelente aderência e conforto, proporcionando maior segurança e durabilidade.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Power Contact 2" },
+        { "caracteristica": "Tamanho", "valor": "175/70 R14" }
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "titulo": "Pneu CONTINENTAL POWERCONTACT 185/60R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/18560R15PowerContact.webp"],
+      "previews": ["/images/descricaoPneus/18560R15PowerContact.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu de alta performance para veículos de passeio, o PowerContact garante menor consumo de combustível e maior resistência ao desgaste.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "PowerContact" },
+        { "caracteristica": "Tamanho", "valor": "185/60 R15" }
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 2 185/65R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/18565R15PowerContact2.webp"],
+      "previews": ["/images/descricaoPneus/18565R15PowerContact2.webp"]
+    },
+    "descricao": {
+      "basica": "Modelo aprimorado da linha PowerContact, oferece melhor frenagem e maior vida útil, sendo indicado para quem busca conforto e economia.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Power Contact 2" },
+        { "caracteristica": "Tamanho", "valor": "185/65 R15" }
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 195/55R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/19555R16PowerContact.webp"],
+      "previews": ["/images/descricaoPneus/19555R16PowerContact.webp"]
+    },
+    "descricao": {
+      "basica": "Com tecnologia de baixa resistência ao rolamento, proporciona maior economia de combustível e conforto ao dirigir.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Power Contact" },
+        { "caracteristica": "Tamanho", "valor": "195/55 R16" }
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 205/55R17",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20555R17PowerContact.webp"],
+      "previews": ["/images/descricaoPneus/20555R17PowerContact.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu de alto desempenho para veículos de passeio, garantindo excelente aderência e segurança em pisos secos e molhados.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Power Contact" },
+        { "caracteristica": "Tamanho", "valor": "205/55 R17" }
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "titulo": "Pneu CONTINENTAL POWER CONTACT 2 205/55R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20555R16PowerContact2.webp"],
+      "previews": ["/images/descricaoPneus/20555R16PowerContact2.webp"]
+    },
+    "descricao": {
+      "basica": "Com tecnologia de última geração, o Power Contact 2 oferece maior durabilidade, economia de combustível e excelente aderência em todas as condições.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Power Contact 2" },
+        { "caracteristica": "Tamanho", "valor": "205/55 R16" }
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "titulo": "Pneu CONTINENTAL PREMIUM CONTACT 2 205/60R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20560R15PremiumContact2.webp"],
+      "previews": ["/images/descricaoPneus/20560R15PremiumContact2.webp"]
+    },
+    "descricao": {
+      "basica": "Modelo premium da Continental, oferece conforto, estabilidade e dirigibilidade superiores.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Premium Contact 2" },
+        { "caracteristica": "Tamanho", "valor": "205/60 R15" }
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT AT 205/60R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20560R16CrossContactAT.webp"],
+      "previews": ["/images/descricaoPneus/20560R16CrossContactAT.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu all-terrain com excelente tração em diferentes superfícies, ideal para SUVs e caminhonetes.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CrossContact AT" },
+        { "caracteristica": "Tamanho", "valor": "205/60 R16" }
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT AT 205/65R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/20565R15CrossContactAT.webp"],
+      "previews": ["/images/descricaoPneus/20565R15CrossContactAT.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu ideal para veículos off-road e SUVs, proporcionando tração superior e maior resistência em diferentes tipos de terrenos.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CrossContact AT" },
+        { "caracteristica": "Tamanho", "valor": "205/65 R15" }
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT LX2 225/65R17",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/22565R17CrossContactLX2.webp"],
+      "previews": ["/images/descricaoPneus/22565R17CrossContactLX2.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu premium para SUVs, projetado para oferecer excelente dirigibilidade no asfalto e ótima performance em terrenos irregulares.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CrossContact LX2" },
+        { "caracteristica": "Tamanho", "valor": "225/65 R17" }
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "titulo": "Pneu CONTINENTAL VANCO 225/70R15",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/22570R15Vanco.webp"],
+      "previews": ["/images/descricaoPneus/22570R15Vanco.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu para vans e veículos utilitários, oferecendo robustez e resistência para o transporte de cargas.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Vanco" },
+        { "caracteristica": "Tamanho", "valor": "225/70 R15" }
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "titulo": "Pneu CONTINENTAL CROSSCONTACT LX2 235/70R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/23570R16CrossContactLX2.webp"],
+      "previews": ["/images/descricaoPneus/23570R16CrossContactLX2.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu desenvolvido para SUVs, oferecendo segurança e desempenho tanto em asfalto quanto em terrenos acidentados.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "CrossContact LX2" },
+        { "caracteristica": "Tamanho", "valor": "235/70 R16" }
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "titulo": "Pneu CONTINENTAL CROSS CONTACT 265/70R16",
+    "categoria": "",
+    "maisVendido": false,
+    "imgs": {
+      "thumbnails": ["/images/descricaoPneus/26570R16CrossContact.webp"],
+      "previews": ["/images/descricaoPneus/26570R16CrossContact.webp"]
+    },
+    "descricao": {
+      "basica": "Pneu robusto para SUVs e caminhonetes, oferecendo alto desempenho em terrenos mistos e excelente tração.",
+      "dadosTecnicos": [
+        { "caracteristica": "Marca", "valor": "Continental" },
+        { "caracteristica": "Modelo", "valor": "Cross Contact" },
+        { "caracteristica": "Tamanho", "valor": "265/70 R16" }
+      ]
+    }
+  }
+]

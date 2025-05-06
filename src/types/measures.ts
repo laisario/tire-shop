@@ -4,3 +4,9 @@ export type MeasureCar = {
   year: string;
   version: string;
 };
+
+export type Measures = {
+  width: string;
+  height: string;
+  rim: string;
+};

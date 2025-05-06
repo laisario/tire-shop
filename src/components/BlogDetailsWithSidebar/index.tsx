@@ -1,9 +1,9 @@
 import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
-import SearchForm from "../Blog/SearchForm";
-import LatestPosts from "../Blog/LatestPosts";
-import LatestProducts from "../Blog/LatestProducts";
-import blogData from "../BlogGrid/blogData";
+import SearchForm from "../Services/SearchForm";
+import LatestPosts from "../Services/LatestPosts";
+import LatestProducts from "../Services/LatestProducts";
+import blogData from "../ServiceGrid/serviceData";
 import Image from "next/image";
 import shopData from "../Shop/shopData"; 
 

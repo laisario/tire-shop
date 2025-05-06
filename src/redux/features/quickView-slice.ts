@@ -15,8 +15,8 @@ const initialState = {
     id: 0,
     images: [],
     imgs: { thumbnails: [], previews: [] },
-  } as Product,
-} as InitialState;
+  } as any,
+} as any;
 
 export const quickView = createSlice({
   name: "quickView",

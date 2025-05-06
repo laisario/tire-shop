@@ -6,14 +6,14 @@ const GenderItem = ({ category }) => {
   return (
     <button
       className={`${
-        selected && "text-blue"
-      } group flex items-center justify-between ease-out duration-200 hover:text-blue `}
+        selected && "text-gray-5"
+      } group flex items-center justify-between ease-out duration-200 hover:text-gray-5 `}
       onClick={() => setSelected(!selected)}
     >
       <div className="flex items-center gap-2">
         <div
           className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${
-            selected ? "border-blue bg-blue" : "bg-white border-gray-3"
+            selected ? "border-gray-5 bg-gray-5" : "bg-white border-gray-3"
           }`}
         >
           <svg
@@ -39,8 +39,8 @@ const GenderItem = ({ category }) => {
 
       <span
         className={`${
-          selected ? "text-white bg-blue" : "bg-gray-2"
-        } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-blue`}
+          selected ? "text-white bg-gray-5" : "bg-gray-2"
+        } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-gray-5`}
       >
         {category.products}
       </span>
@@ -48,7 +48,7 @@ const GenderItem = ({ category }) => {
   );
 };
 
-const GenderDropdown = ({ genders }) => {
+const BrandsDropdown = ({ brands }) => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
 
   return (
@@ -59,7 +59,7 @@ const GenderDropdown = ({ genders }) => {
           toggleDropdown && "shadow-filter"
         }`}
       >
-        <p className="text-dark">Gender</p>
+        <p className="text-dark">Marca</p>
         <button
           onClick={() => setToggleDropdown(!toggleDropdown)}
           aria-label="button for gender dropdown"
@@ -91,7 +91,7 @@ const GenderDropdown = ({ genders }) => {
           toggleDropdown ? "flex" : "hidden"
         }`}
       >
-        {genders.map((gender, key) => (
+        {brands.map((gender, key) => (
           <GenderItem key={key} category={gender} />
         ))}
       </div>
@@ -99,4 +99,4 @@ const GenderDropdown = ({ genders }) => {
   );
 };
 
-export default GenderDropdown;
+export default BrandsDropdown;

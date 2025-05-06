@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import Image from "next/image";
+import Link from "next/link";
 
 const SingleItem = ({ item, removeItemFromCart }) => {
   const dispatch = useDispatch<AppDispatch>();
@@ -18,10 +19,10 @@ const SingleItem = ({ item, removeItemFromCart }) => {
         </div>
 
         <div>
-          <h3 className="font-medium text-dark mb-1 ease-out duration-200 hover:text-blue">
-            <a href="#"> {item.title} </a>
+          <h3 className="font-medium text-dark mb-1 ease-out duration-200 hover:text-gray-5">
+          <Link href={`/pneus/${item?.id}`}> {item?.title} </Link>
           </h3>
-          <p className="text-custom-sm">Price: ${item.discountedPrice}</p>
+          <p className="text-custom-sm">Quantidade: {item.quantity}</p>
         </div>
       </div>
 

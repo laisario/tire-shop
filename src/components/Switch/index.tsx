@@ -12,7 +12,7 @@ function Switch() {
         <span className="text-gray-7 font-medium text-base">Busque por</span>
         <div className="relative flex items-center w-50 bg-gray-2 rounded-lg p-2">
           <div
-            className={`absolute top-0 left-0 w-1/2 h-full bg-yellow rounded-lg transition-transform duration-300 ease-in-out ${selectedOption === "carro" ? "translate-x-full" : "translate-x-0"}`}
+            className={`absolute top-0 left-0 w-1/2 h-full bg-gray-7 rounded-lg transition-transform duration-300 ease-in-out ${selectedOption === "carro" ? "translate-x-full" : "translate-x-0"}`}
           ></div>
           <button
             className={`relative flex items-center justify-center gap-1 w-1/2 text-center text-sm font-small transition-all ${selectedOption === "medida" ? "text-white" : "text-gray-5"}`}
