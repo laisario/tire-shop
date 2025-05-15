@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import CustomSelect from "./CustomSelect";
 import CategoryDropdown from "./CategoryDropdown";
-import BrandsDropdown from "./GenderDropdown";
+import BrandsDropdown from "./BrandsDropdown";
 import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
 import dadosPneus from "../../../data/dadosPneus.json";
@@ -14,8 +14,32 @@ const ShopWithSidebar = () => {
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const [page, setPage] = useState(0);
+  const [filter, setFilter] = useState({
+    categorias: [],
+    marcas: [],
+    ordenacao: {label: "Todos", value: "todos"}
+  })
   const pathname = usePathname()
-  console.log(pathname)
+
+  const pneusBridgestone = useMemo(() => {
+    return dadosPneus.filter((p) => p.marca === "BRIDGESTONE");
+  }, [dadosPneus]);
+
+  const pneusContinental = useMemo(() => {
+    return dadosPneus.filter((p) => p.marca === "CONTINENTAL");
+  }, [dadosPneus]);
+
+  const pneusCaminhoesOnibus = useMemo(() => {
+    return dadosPneus.filter((p) => p.categoria === "caminhões / ônibus");
+  }, [dadosPneus]);
+  
+  const pneusCarros = useMemo(() => {
+    return dadosPneus.filter((p) => p.categoria === "carros");
+  }, [dadosPneus]);
+  
+  const pneusVans = useMemo(() => {
+    return dadosPneus.filter((p) => p.categoria === "vans");
+  }, [dadosPneus]);
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -26,36 +50,41 @@ const ShopWithSidebar = () => {
   };
 
   const options = [
-    { label: "Todos", value: "0" },
-    { label: "Mais vendidos", value: "1" },
+    { label: "Todos", value: "todos" },
+    { label: "Mais vendidos", value: "maisVendidos" },
   ];
 
   const categories = [
     {
       name: "Carros",
-      products: 30,
+      products: pneusCarros?.length,
       isRefined: false,
+      value: "carros"
     },
     {
       name: "Vans",
-      products: 10,
+      products: pneusVans?.length,
       isRefined: true,
+      value: "vams"
     },
     {
       name: "Ônibus / Caminhões",
-      products: 12,
+      products: pneusCaminhoesOnibus?.length,
       isRefined: false,
+      value: "onibus/caminhoes"
     },
   ];
 
   const brands = [
     {
       name: "Bridgestone",
-      products: 10,
+      value: "BRIDGESTONE",
+      products: pneusBridgestone?.length,
     },
     {
       name: "Continetal",
-      products: 23,
+      value: "CONTINENTAL",
+      products: pneusContinental?.length,
     },
   ];
 
@@ -78,13 +107,31 @@ const ShopWithSidebar = () => {
     };
   });
 
+  const dadosFiltrados = useMemo(() => {
+    return dadosPneus.filter((pneu) => {
+      const filtroMarcas = filter.marcas?.length
+        ? filter.marcas.includes(pneu.marca)
+        : true;
+  
+      const filtroCategorias = filter.categorias?.length
+        ? filter.categorias.includes(pneu.categoria)
+        : true;
+
+      const filtroMaisVendidos = filter.ordenacao.value === "maisVendidos" ? pneu.maisVendido : true;
+  
+      return filtroMarcas && filtroCategorias && filtroMaisVendidos;
+    });
+  }, [dadosPneus, filter.marcas, filter.categorias, filter.ordenacao.value]);
+
+  console.log(filter)
+
   const paginate = () => {
     const itemsPerPage = 9;
     const numberOfPages = Math.ceil(dadosPneus?.length / itemsPerPage)
 
     return Array.from({length: numberOfPages}, (_, index) => {
       const start = index * itemsPerPage;
-      return dadosPneus.slice(start, start + itemsPerPage)
+      return dadosFiltrados.slice(start, start + itemsPerPage)
     })
   };
 
@@ -93,6 +140,11 @@ const ShopWithSidebar = () => {
   const handlePage = (newPage: number) => {
     setPage(newPage)
   }
+   
+  const cleanFilters = () => {
+    setFilter({marcas: [], categorias: [], ordenacao: {label: 'Todos', value: "todos"}})
+  }
+
 
   return (
     <>
@@ -149,15 +201,23 @@ const ShopWithSidebar = () => {
                   <div className="bg-white shadow-1 rounded-lg py-4 px-5">
                     <div className="flex items-center justify-between">
                       <p>Filtros:</p>
-                      <button className="text-gray-5">Limpar todos</button>
+                      <button className="text-gray-5" onClick={cleanFilters}>Limpar todos</button>
                     </div>
                   </div>
 
                   {/* <!-- category box --> */}
-                  <CategoryDropdown categories={categories} />
+                  <CategoryDropdown 
+                    filter={filter} 
+                    setFilter={setFilter} 
+                    categories={categories} 
+                  />
 
                   {/* <!-- gender box --> */}
-                  <BrandsDropdown brands={brands} />
+                  <BrandsDropdown 
+                    brands={brands}
+                    filter={filter} 
+                    setFilter={setFilter} 
+                  />
                 </div>
               </form>
             </div>
@@ -169,10 +229,14 @@ const ShopWithSidebar = () => {
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
                   <div className="flex flex-wrap items-center gap-4">
-                    <CustomSelect options={options} />
-
+                    <CustomSelect
+                      filter={filter} 
+                      setFilter={setFilter} 
+                      options={options} 
+                    />
                     <p>
-                      Mostrando <span className="text-dark">8 de {dadosPneus?.length}</span>{" "}
+                      Mostrando <span className="text-dark">8 de {dadosFiltrados
+                      ?.length}</span>{" "}
                       Produtos
                     </p>
                   </div>

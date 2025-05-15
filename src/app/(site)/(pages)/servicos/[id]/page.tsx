@@ -26,7 +26,7 @@ const ServiceDetailsPage = () => {
 
   return (
     <main>
-      <Breadcrumb title={service?.title} pages={[service?.title]} />
+      <Breadcrumb title={service?.title} pages={["servicos /", service?.title]} />
       <section className="overflow-hidden pt-5 lg:pt-10 xl:pt-14 bg-gray-2">
         <div className="max-w-[750px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="rounded-[10px] overflow-hidden mb-7.5">

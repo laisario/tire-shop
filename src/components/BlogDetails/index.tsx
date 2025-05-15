@@ -20,7 +20,7 @@ const BlogDetails = ({title}) => {
 
           <div>
             <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
-              {title}
+              Nossa história
             </h2>
 
             <p className="mb-6 font-medium text-md xl:text-lg">

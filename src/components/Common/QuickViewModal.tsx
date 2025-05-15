@@ -32,9 +32,8 @@ const QuickViewModal = () => {
   const handleAddToCart = () => {
     dispatch(
       addItemToCart({
-        id: product?.id,
-        title: product?.titulo,
-        quantity,
+        ...product,
+        quantity
       })
     );
 

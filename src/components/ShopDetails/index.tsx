@@ -4,9 +4,9 @@ import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { AppDispatch } from "@/redux/store";
-import whatsAppSvg from '../../../public/whatsapp.svg';
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "@/redux/features/cart-slice";
+import WhatsappButton from "../Common/Whatsapp/WhatsappButton";
 
 const ShopDetails = ({product}) => {
   const { openPreviewModal } = usePreviewSlider();
@@ -37,9 +37,8 @@ const ShopDetails = ({product}) => {
   const handleAddToCart = () => {
     dispatch(
       addItemToCart({
-        title: product?.titulo,
-        quantity,
-        id: product?.id,
+        ...product,
+        quantity
       })
     );
   };
@@ -196,17 +195,7 @@ const ShopDetails = ({product}) => {
                         Adicionar aos interesses
                       </button>
 
-                      <button
-                        className="inline-flex gap-4 font-medium text-white bg-green py-3 px-7 rounded-md ease-out duration-200 hover:bg-green-dark"
-                        >
-                        Compre agora
-                        <Image
-                          width={20}
-                          height={20}
-                          src={whatsAppSvg}
-                          alt="Icon WhatsAPp"
-                          />
-                      </button>
+                      <WhatsappButton pneu={product} />
                     </div>
                   </div>
                 </div>

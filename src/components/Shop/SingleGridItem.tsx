@@ -18,9 +18,8 @@ const SingleGridItem = ({ item }) => {
   const handleAddToCart = () => {
     dispatch(
       addItemToCart({
-        title: item?.titulo,
+        ...item,
         quantity: 1,
-        id: item?.id,
       })
     );
   };

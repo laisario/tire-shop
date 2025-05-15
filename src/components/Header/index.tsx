@@ -10,6 +10,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 import Switch from "../Switch";
 import SwitchMobile from "../Switch/SwitchMobile";
 import Search from "./Search";
+import { useRouter } from "next/navigation";
 
 
 const Header = () => {
@@ -19,6 +20,7 @@ const Header = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const { openCartModal } = useCartModalContext();
   const isMobile = useIsMobile();
+  const router = useRouter();
 
   const product = useAppSelector((state) => state.cartReducer.items);
 
@@ -258,7 +260,7 @@ const Header = () => {
             >
               {/* <!-- Main Nav Start --> */}
               <nav>
-                <ul className="flex xl:items-center flex-col xl:flex-row gap-5 xl:gap-6">
+                <ul className="flex  h-[220px] xl:items-center flex-col xl:flex-row gap-5 xl:gap-6">
                   {menuData.map((menuItem, i) =>
                     menuItem.submenu ? (
                       <Dropdown
@@ -271,14 +273,14 @@ const Header = () => {
                         key={i}
                         className="group relative before:w-0 before:h-[3px] before:bg-gray-3 before:absolute before:left-0 before:top-0 before:rounded-b-[3px] before:ease-out before:duration-200 hover:before:w-full "
                       >
-                        <Link
-                          href={menuItem.path}
+                        <button
+                          onClick={() => {setNavigationOpen(false); router.push(menuItem.path)}}
                           className={`hover:text-gray-6 text-custom-sm font-medium  flex ${
                             stickyMenu ? "xl:py-4" : "xl:py-6"
                           }`}
                           >
                           {menuItem.title}
-                        </Link>
+                        </button>
                       </li>
                     )
                   )}

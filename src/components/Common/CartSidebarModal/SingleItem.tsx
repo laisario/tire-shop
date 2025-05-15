@@ -6,6 +6,7 @@ import Link from "next/link";
 
 const SingleItem = ({ item, removeItemFromCart }) => {
   const dispatch = useDispatch<AppDispatch>();
+  console.log(item)
 
   const handleRemoveFromCart = () => {
     dispatch(removeItemFromCart(item.id));
@@ -20,7 +21,7 @@ const SingleItem = ({ item, removeItemFromCart }) => {
 
         <div>
           <h3 className="font-medium text-dark mb-1 ease-out duration-200 hover:text-gray-5">
-          <Link href={`/pneus/${item?.id}`}> {item?.title} </Link>
+          <Link href={`/pneus/${item?.id}`}> {item?.titulo} </Link>
           </h3>
           <p className="text-custom-sm">Quantidade: {item.quantity}</p>
         </div>

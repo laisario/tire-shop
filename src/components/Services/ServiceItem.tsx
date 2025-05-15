@@ -25,7 +25,7 @@ const ServiceItem = ({ service }: { service: ServiceItemT }) => {
           href={`/servicos/${service?.id}`}
           className="text-custom-sm inline-flex items-center gap-2 py-2 ease-out duration-200 hover:text-gray-3"
         >
-          Leia mais
+          Saiba mais
           <svg
             className="fill-current"
             width="18"

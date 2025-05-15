@@ -1,23 +1,21 @@
 "use client";
 import React, { useState } from "react";
 
-const GenderItem = ({ category }) => {
-  const [selected, setSelected] = useState(false);
+const BrandCheckbox = ({ category, isSelected, onToggle }) => {
   return (
-    <button
-      className={`${
-        selected && "text-gray-5"
-      } group flex items-center justify-between ease-out duration-200 hover:text-gray-5 `}
-      onClick={() => setSelected(!selected)}
+    <label
+      className={`group flex items-center justify-between ease-out duration-200 hover:text-gray-5 cursor-pointer ${
+        isSelected ? "text-gray-5" : ""
+      }`}
     >
       <div className="flex items-center gap-2">
         <div
-          className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${
-            selected ? "border-gray-5 bg-gray-5" : "bg-white border-gray-3"
+          className={`flex items-center justify-center rounded w-4 h-4 border ${
+            isSelected ? "border-gray-5 bg-gray-5" : "bg-white border-gray-3"
           }`}
         >
           <svg
-            className={selected ? "block" : "hidden"}
+            className={isSelected ? "block" : "hidden"}
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -33,23 +31,44 @@ const GenderItem = ({ category }) => {
             />
           </svg>
         </div>
-
         <span>{category.name}</span>
       </div>
 
       <span
         className={`${
-          selected ? "text-white bg-gray-5" : "bg-gray-2"
+          isSelected ? "text-white bg-gray-5" : "bg-gray-2"
         } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-gray-5`}
       >
         {category.products}
       </span>
-    </button>
+
+      <input
+        type="checkbox"
+        checked={isSelected}
+        onChange={() => onToggle(category.value)}
+        className="hidden"
+      />
+    </label>
   );
 };
 
-const BrandsDropdown = ({ brands }) => {
+const BrandsDropdown = ({ brands, filter, setFilter }) => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
+
+  const handleToggle = (brandName) => {
+    setFilter((prev) => {
+      const marcas = prev?.marcas ?? [];
+
+      const novasMarcas = marcas.includes(brandName)
+        ? marcas.filter((b) => b !== brandName)
+        : [...marcas, brandName];
+
+      return {
+        ...prev,
+        marcas: novasMarcas,
+      };
+    });
+  };
 
   return (
     <div className="bg-white shadow-1 rounded-lg">
@@ -91,8 +110,13 @@ const BrandsDropdown = ({ brands }) => {
           toggleDropdown ? "flex" : "hidden"
         }`}
       >
-        {brands.map((gender, key) => (
-          <GenderItem key={key} category={gender} />
+        {brands.map((brand, key) => (
+          <BrandCheckbox
+            key={key}
+            category={brand}
+            isSelected={filter?.marcas?.includes(brand.value)}
+            onToggle={handleToggle}
+          />
         ))}
       </div>
     </div>

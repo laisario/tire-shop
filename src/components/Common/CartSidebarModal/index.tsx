@@ -11,6 +11,7 @@ import Link from "next/link";
 import EmptyCart from "./EmptyCart";
 import Image from "next/image";
 import whatsapp from '../../../../public/whatsapp.svg';
+import WhatsappButton from "../Whatsapp/WhatsappButton";
 
 const CartSidebarModal = () => {
   const { isCartModalOpen, closeCartModal } = useCartModalContext();
@@ -105,18 +106,7 @@ const CartSidebarModal = () => {
                 Ver todos interesses
               </Link>
 
-              <Link
-                href="/checkout"
-                className="w-full flex justify-center font-medium text-white bg-gray-7 py-[13px] px-6 rounded-md ease-out duration-200 hover:bg-opacity-70"
-              >
-                Solicitar orçamento
-                <Image 
-                  width={20}
-                  height={20}
-                  src={whatsapp}
-                  alt="Whatsapp icon"
-                />
-              </Link>
+              <WhatsappButton produtos={cartItems} titulo="Solicitar orçamento" />
             </div>
           </div>
         </div>

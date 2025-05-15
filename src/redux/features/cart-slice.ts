@@ -7,7 +7,7 @@ type InitialState = {
 
 type CartItem = {
   id: number;
-  title: string;
+  titulo: string;
   price?: number;
   discountedPrice?: number;
   quantity: number;
@@ -18,7 +18,9 @@ type CartItem = {
 };
 
 const initialState: InitialState = {
-  items: [],
+  items:  typeof window !== "undefined" && localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart")!)
+  : [],
 };
 
 export const cart = createSlice({
@@ -26,22 +28,18 @@ export const cart = createSlice({
   initialState,
   reducers: {
     addItemToCart: (state, action: PayloadAction<CartItem>) => {
-      const { id, title, price, quantity, discountedPrice, imgs } =
-        action.payload;
+      const { id, quantity, } = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
-
+      
       if (existingItem) {
         existingItem.quantity += quantity;
       } else {
         state.items.push({
-          id,
-          title,
-          price,
-          quantity,
-          discountedPrice,
-          imgs,
+          ...action.payload
         });
       }
+
+      localStorage.setItem("cart", JSON.stringify(state.items));
     },
     removeItemFromCart: (state, action: PayloadAction<number>) => {
       const itemId = action.payload;

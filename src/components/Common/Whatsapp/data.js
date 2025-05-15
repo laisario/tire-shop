@@ -1,0 +1,1 @@
+export const site = "www.meusiteaqui0"

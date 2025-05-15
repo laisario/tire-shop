@@ -2,6 +2,7 @@ import { useAppSelector } from "@/redux/store";
 import Image from "next/image";
 import React from "react";
 import whatsAppSvg from '../../../public/whatsapp.svg';
+import WhatsappButton from "../Common/Whatsapp/WhatsappButton";
 
 
 const OrderSummary = () => {
@@ -30,7 +31,7 @@ const OrderSummary = () => {
           {cartItems.map((item, key) => (
             <div key={key} className="flex items-center gap-4 justify-between py-5 border-b border-gray-3">
               <div>
-                <p className="text-dark">{item.title}</p>
+                <p className="text-dark">{item.titulo}</p>
               </div>
               <div>
                 <p className="text-dark text-right">
@@ -53,18 +54,9 @@ const OrderSummary = () => {
           </div> */}
 
           {/* <!-- checkout button --> */}
-          <button
-            type="submit"
-            className="w-full flex gap-4 justify-center font-medium bg-green text-white py-3 px-6 rounded-md ease-out duration-200 mt-7.5 hover:bg-green-dark"
-          >
-            Finalizar pedido
-            <Image
-              width={20}
-              height={20}
-              src={whatsAppSvg}
-              alt="Icon WhatsAPp"
-              />
-          </button>
+          <div className="flex justify-center align-center mt-6">
+            <WhatsappButton produtos={cartItems} />
+          </div>
         </div>
       </div>
     </div>

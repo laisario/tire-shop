@@ -38,7 +38,7 @@ const Newsletter = () => {
                   />
                   <button
                     type="submit"
-                    className="inline-flex justify-center py-3 px-7 text-white bg-yellow font-medium rounded-md ease-out duration-200 hover:bg-yellow-dark"
+                    className="inline-flex justify-center py-3 px-7 text-white bg-meta-2 font-medium rounded-md ease-out duration-200 hover:bg-meta-3"
                   >
                     Inscreva se
                   </button>

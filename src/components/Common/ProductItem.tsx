@@ -25,7 +25,6 @@ const ProductItem = ({ item }) => {
     dispatch(
       addItemToCart({
         ...item,
-        title: item?.titulo,
         quantity: 1,
       })
     );

@@ -43,7 +43,7 @@ const SingleItem = ({ item }) => {
 
             <div>
               <h3 className="text-dark ease-out duration-200 hover:text-gray-5">
-                <Link href={`/pneus/${item?.id}`}> {item?.title} </Link>
+                <Link href={`/pneus/${item?.id}`}> {item?.titulo} </Link>
               </h3>
             </div>
           </div>
