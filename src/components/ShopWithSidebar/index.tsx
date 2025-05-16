@@ -8,13 +8,12 @@ import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
 import dadosPneus from "../../../data/dadosPneus.json";
 import { useSearchParams } from "next/navigation";
-import Fuse from 'fuse.js';
-
-
-const options = [
-  { label: "Todos", value: "todos" },
-  { label: "Mais vendidos", value: "maisVendidos" },
-];
+import { usePneuGroups } from "@/hooks/usePneuGroups";
+import { useFilteredPneus } from "@/hooks/useFilteredPneus";
+import { usePaginacao } from "@/hooks/usePaginacao";
+import { useBrands } from "@/hooks/useBrands";
+import { useCategories } from "@/hooks/useCategories";
+import { opcoesOrdenacao as options } from "../../../data/opcoesOrdenacao";
 
 const ShopWithSidebar = () => {
   const [productStyle, setProductStyle] = useState("grid");
@@ -27,25 +26,12 @@ const ShopWithSidebar = () => {
     ordenacao: {label: "Todos", value: "todos"}
   })
   
-  const pneusBridgestone = useMemo(() => {
-    return dadosPneus.filter((p) => p.marca === "BRIDGESTONE");
-  }, [dadosPneus]);
-
-  const pneusContinental = useMemo(() => {
-    return dadosPneus.filter((p) => p.marca === "CONTINENTAL");
-  }, [dadosPneus]);
-
-  const pneusCaminhoesOnibus = useMemo(() => {
-    return dadosPneus.filter((p) => p.categoria === "caminhões / ônibus");
-  }, [dadosPneus]);
-  
-  const pneusCarros = useMemo(() => {
-    return dadosPneus.filter((p) => p.categoria === "carros");
-  }, [dadosPneus]);
-  
-  const pneusVans = useMemo(() => {
-    return dadosPneus.filter((p) => p.categoria === "vans");
-  }, [dadosPneus]);
+  const searchParams = useSearchParams();
+  const search = searchParams.get("search");
+  const category = searchParams.get("category");
+  const measure = searchParams.get("measure");
+ 
+  const { pneusBridgestone, pneusContinental, pneusCaminhoesOnibus, pneusCarros, pneusVans } = usePneuGroups(dadosPneus);
   
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -54,41 +40,17 @@ const ShopWithSidebar = () => {
       setStickyMenu(false);
     }
   };
-  
 
-  const categories = [
-    {
-      name: "Carros",
-      products: pneusCarros?.length,
-      isRefined: false,
-      value: "carros"
-    },
-    {
-      name: "Vans",
-      products: pneusVans?.length,
-      isRefined: true,
-      value: "vams"
-    },
-    {
-      name: "Ônibus / Caminhões",
-      products: pneusCaminhoesOnibus?.length,
-      isRefined: false,
-      value: "onibus/caminhoes"
-    },
-  ];
-  
-  const brands = [
-    {
-      name: "Bridgestone",
-      value: "BRIDGESTONE",
-      products: pneusBridgestone?.length,
-    },
-    {
-      name: "Continetal",
-      value: "CONTINENTAL",
-      products: pneusContinental?.length,
-    },
-  ];
+  const brands = useBrands({
+    bridgestone: pneusBridgestone,
+    continental: pneusContinental,
+  });
+
+  const categories = useCategories({
+    carros: pneusCarros,
+    vans: pneusVans,
+    caminhoes: pneusCaminhoesOnibus,
+  });
   
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -109,72 +71,17 @@ const ShopWithSidebar = () => {
     };
   });
   
-  const searchParams = useSearchParams()
-  const search = searchParams.get('search')
-  const category = searchParams.get('category')
-  const measure = searchParams.get('measure')
-
-  const dadosFiltrados = useMemo(() => {
-    let dadosBase = dadosPneus;
-    if (!dadosBase.length ) return [];
-
-    if (!!measure) {
-      const fuse = new Fuse(dadosBase, {
-        keys: ['medida'],
-        threshold: 0.3,
-      });
-      const resultado = fuse.search(measure)
-      return resultado.map((r) => r.item);
-    }
+  const dadosFiltrados = useFilteredPneus(dadosPneus, filter, search, category, measure);
     
-    const dadosFiltradosPorCategoria = category && category !== 'todas'
-    ? dadosPneus.filter((p) => p.categoria === category)
-    : dadosPneus;
-    if (!!search) {
-      const fuse = new Fuse(dadosFiltradosPorCategoria, {
-        keys: ['titulo', 'marca', 'medida', 'descricao.dadosTecnicos.valor'],
-        threshold: 0.3,
-      });
-      const resultado = fuse.search(search)
-      dadosBase = resultado.map((r) => r.item);
-    }
-    return dadosBase.filter((pneu) => {
-      const filtroMarcas = filter.marcas?.length
-      ? filter.marcas.includes(pneu.marca)
-      : true;
-      
-      const filtroCategorias = filter.categorias?.length
-      ? filter.categorias.includes(pneu.categoria)
-      : true;
-      
-      const filtroMaisVendidos = filter.ordenacao.value === "maisVendidos" ? pneu.maisVendido : true;
-      
-      return filtroMarcas && filtroCategorias && filtroMaisVendidos;
-    });
-    
-  }, [dadosPneus, filter.marcas, filter.categorias, filter.ordenacao, search, category, measure]);
-  
-  
-  const paginate = () => {
-    const itemsPerPage = 8;
-    const numberOfPages = Math.ceil(dadosPneus?.length / itemsPerPage)
-    
-    return Array.from({length: numberOfPages}, (_, index) => {
-      const start = index * itemsPerPage;
-      return dadosFiltrados.slice(start, start + itemsPerPage)
-    })
-  };
-  
-  const pneus = paginate()
-
   const handlePage = (newPage: number) => {
     setPage(newPage)
   }
-   
+  
   const cleanFilters = () => {
     setFilter({marcas: [], categorias: [], ordenacao: {label: 'Todos', value: "todos"}})
   }
-
+  
+  const pneus = usePaginacao(dadosFiltrados)
 
   return (
     <>

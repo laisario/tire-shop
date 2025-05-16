@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import Fuse from 'fuse.js';
 
-export function usePneusFiltrados({ dadosPneus, filter, search, category, measure }) {
+export function useFilteredPneus(dadosPneus, filter, search, category, measure) {
   return useMemo(() => {
     let dadosBase = dadosPneus;
     if (!dadosBase.length) return [];
