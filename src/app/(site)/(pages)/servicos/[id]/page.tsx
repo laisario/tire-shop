@@ -19,7 +19,6 @@ const ServiceDetailsPage = () => {
   const { getServiceById } = useSearchService();
 
   useEffect(() => {
-    console.log(id)
     const response = getServiceById(String(id))
     setService(response)
   }, [])

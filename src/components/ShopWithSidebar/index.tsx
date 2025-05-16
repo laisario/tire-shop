@@ -7,7 +7,14 @@ import BrandsDropdown from "./BrandsDropdown";
 import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
 import dadosPneus from "../../../data/dadosPneus.json";
-import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import Fuse from 'fuse.js';
+
+
+const options = [
+  { label: "Todos", value: "todos" },
+  { label: "Mais vendidos", value: "maisVendidos" },
+];
 
 const ShopWithSidebar = () => {
   const [productStyle, setProductStyle] = useState("grid");
@@ -19,8 +26,7 @@ const ShopWithSidebar = () => {
     marcas: [],
     ordenacao: {label: "Todos", value: "todos"}
   })
-  const pathname = usePathname()
-
+  
   const pneusBridgestone = useMemo(() => {
     return dadosPneus.filter((p) => p.marca === "BRIDGESTONE");
   }, [dadosPneus]);
@@ -40,7 +46,7 @@ const ShopWithSidebar = () => {
   const pneusVans = useMemo(() => {
     return dadosPneus.filter((p) => p.categoria === "vans");
   }, [dadosPneus]);
-
+  
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
       setStickyMenu(true);
@@ -48,11 +54,7 @@ const ShopWithSidebar = () => {
       setStickyMenu(false);
     }
   };
-
-  const options = [
-    { label: "Todos", value: "todos" },
-    { label: "Mais vendidos", value: "maisVendidos" },
-  ];
+  
 
   const categories = [
     {
@@ -74,7 +76,7 @@ const ShopWithSidebar = () => {
       value: "onibus/caminhoes"
     },
   ];
-
+  
   const brands = [
     {
       name: "Bridgestone",
@@ -87,7 +89,7 @@ const ShopWithSidebar = () => {
       products: pneusContinental?.length,
     },
   ];
-
+  
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
 
@@ -97,44 +99,72 @@ const ShopWithSidebar = () => {
         setProductSidebar(false);
       }
     }
-
+    
     if (productSidebar) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-
+    
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
+  
+  const searchParams = useSearchParams()
+  const search = searchParams.get('search')
+  const category = searchParams.get('category')
+  const measure = searchParams.get('measure')
 
   const dadosFiltrados = useMemo(() => {
-    return dadosPneus.filter((pneu) => {
-      const filtroMarcas = filter.marcas?.length
-        ? filter.marcas.includes(pneu.marca)
-        : true;
-  
-      const filtroCategorias = filter.categorias?.length
-        ? filter.categorias.includes(pneu.categoria)
-        : true;
+    let dadosBase = dadosPneus;
+    if (!dadosBase.length ) return [];
 
+    if (!!measure) {
+      const fuse = new Fuse(dadosBase, {
+        keys: ['medida'],
+        threshold: 0.3,
+      });
+      const resultado = fuse.search(measure)
+      return resultado.map((r) => r.item);
+    }
+    
+    const dadosFiltradosPorCategoria = category && category !== 'todas'
+    ? dadosPneus.filter((p) => p.categoria === category)
+    : dadosPneus;
+    if (!!search) {
+      const fuse = new Fuse(dadosFiltradosPorCategoria, {
+        keys: ['titulo', 'marca', 'medida', 'descricao.dadosTecnicos.valor'],
+        threshold: 0.3,
+      });
+      const resultado = fuse.search(search)
+      dadosBase = resultado.map((r) => r.item);
+    }
+    return dadosBase.filter((pneu) => {
+      const filtroMarcas = filter.marcas?.length
+      ? filter.marcas.includes(pneu.marca)
+      : true;
+      
+      const filtroCategorias = filter.categorias?.length
+      ? filter.categorias.includes(pneu.categoria)
+      : true;
+      
       const filtroMaisVendidos = filter.ordenacao.value === "maisVendidos" ? pneu.maisVendido : true;
-  
+      
       return filtroMarcas && filtroCategorias && filtroMaisVendidos;
     });
-  }, [dadosPneus, filter.marcas, filter.categorias, filter.ordenacao.value]);
-
-  console.log(filter)
-
+    
+  }, [dadosPneus, filter.marcas, filter.categorias, filter.ordenacao, search, category, measure]);
+  
+  
   const paginate = () => {
-    const itemsPerPage = 9;
+    const itemsPerPage = 8;
     const numberOfPages = Math.ceil(dadosPneus?.length / itemsPerPage)
-
+    
     return Array.from({length: numberOfPages}, (_, index) => {
       const start = index * itemsPerPage;
       return dadosFiltrados.slice(start, start + itemsPerPage)
     })
   };
-
+  
   const pneus = paginate()
 
   const handlePage = (newPage: number) => {
@@ -149,7 +179,7 @@ const ShopWithSidebar = () => {
   return (
     <>
       <Breadcrumb
-        title={"Conheça nossos pneus!"}
+        title={!!search ? `Você buscou por: ${search}` : "Conheça nossos pneus!"}
         pages={["pneus"]}
       />
       <section className="overflow-hidden relative pb-20 pt-5 lg:pt-10 xl:pt-14 bg-[#f3f4f6]">
@@ -323,21 +353,32 @@ const ShopWithSidebar = () => {
               </div>
 
               {/* <!-- Products Grid Tab Content Start --> */}
-              <div
-                className={`${
-                  productStyle === "grid"
-                    ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9"
-                    : "flex flex-col gap-7.5"
-                }`}
-              >
-                {pneus[page].map((item, key) =>
-                  productStyle === "grid" ? (
-                    <SingleGridItem item={item} key={key} />
-                  ) : (
-                    <SingleListItem item={item} key={key} />
-                  )
-                )}
-              </div>
+              {pneus[page]?.length ? (
+                <div
+                  className={`${
+                    productStyle === "grid"
+                      ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9"
+                      : "flex flex-col gap-7.5"
+                  }`}
+                >
+                  {pneus[page]?.map((item, key) =>
+                    productStyle === "grid" ? (
+                      <SingleGridItem item={item} key={key} />
+                    ) : (
+                      <SingleListItem item={item} key={key} />
+                    )
+                  )}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center text-center py-16 px-4">
+                  <h2 className="text-lg font-semibold text-gray-700 mb-2">
+                    Nenhum resultado encontrado :(
+                  </h2>
+                  <p className="text-gray-500 max-w-md">
+                    Não encontramos nenhum item que corresponda à sua busca. Tente usar outros termos ou ajustar os filtros.
+                  </p>
+                </div>
+              )}
               {/* <!-- Products Grid Tab Content End --> */}
 
               {/* <!-- Products Pagination Start --> */}

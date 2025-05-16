@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const SingleItem = ({ item, removeItemFromCart }) => {
   const dispatch = useDispatch<AppDispatch>();
-  console.log(item)
 
   const handleRemoveFromCart = () => {
     dispatch(removeItemFromCart(item.id));

@@ -12,12 +12,21 @@ import SwitchMobile from "../Switch/SwitchMobile";
 import Search from "./Search";
 import { useRouter } from "next/navigation";
 
+const options = [
+  { label: "Todas categorias", value: "todas" },
+  { label: "Carros", value: "carros" },
+  { label: "Vans", value: "vans" },
+  { label: "Ônibus / Caminhões", value: "onibusCaminhoes" },
+  { label: "Motos", value: "motos" },
+  { label: "Bicicletas", value: "bicicletas" },
+];
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(options[0]);
   const { openCartModal } = useCartModalContext();
   const isMobile = useIsMobile();
   const router = useRouter();
@@ -57,6 +66,11 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyMenu);
   });
 
+  const handleSearch = () => {
+    if (!searchQuery) return;
+    router.push(`/pneus?search=${encodeURIComponent(searchQuery)}&category=${encodeURIComponent(selectedOption?.value)}`);
+  };
+
   return (
     <header
       className={`left-0 top-0 w-full z-9999 bg-white transition-all ease-in-out duration-300 ${
@@ -85,6 +99,10 @@ const Header = () => {
               <Search
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
+                handleSearch={handleSearch}
+                options={options}
+                selectedOption={selectedOption}
+                setSelectedOption={setSelectedOption}
               />
             )}
 
@@ -240,6 +258,10 @@ const Header = () => {
           <Search
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
+            handleSearch={handleSearch}
+            options={options}
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
           />
         )}
 
@@ -260,7 +282,7 @@ const Header = () => {
             >
               {/* <!-- Main Nav Start --> */}
               <nav>
-                <ul className="flex  h-[220px] xl:items-center flex-col xl:flex-row gap-5 xl:gap-6">
+                <ul className="flex xl:items-center flex-col xl:flex-row gap-5 xl:gap-6">
                   {menuData.map((menuItem, i) =>
                     menuItem.submenu ? (
                       <Dropdown

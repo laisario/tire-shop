@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useModalContext } from "@/app/context/QuickViewModalContext";
 import { updateQuickView } from "@/redux/features/quickView-slice";
 import { addItemToCart } from "@/redux/features/cart-slice";
@@ -10,18 +10,21 @@ import Image from "next/image";
 
 const SingleGridItem = ({ item }) => {
   const { openModal } = useModalContext();
+  const [loadingAddToCart, setLoadingAddToCart] = useState(false)
 
   const dispatch = useDispatch<AppDispatch>();
 
   
   // add to cart
   const handleAddToCart = () => {
+    setLoadingAddToCart(true)
     dispatch(
       addItemToCart({
         ...item,
         quantity: 1,
       })
     );
+    setLoadingAddToCart(false)
   };
   
   // update the QuickView state
@@ -71,7 +74,11 @@ const SingleGridItem = ({ item }) => {
             onClick={() => handleAddToCart()}
             className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-gray-5 text-white ease-out duration-200 hover:bg-gray-5-dark"
           >
-            Adicionar aos interesses
+            {loadingAddToCart ? (
+                <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              ) : (
+                    'Adicionar aos interesses'
+            )}
           </button>
         </div>
       </div>

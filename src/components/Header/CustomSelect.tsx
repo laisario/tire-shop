@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const CustomSelect = ({ options }) => {
+const CustomSelect = ({ options, selectedOption, setSelectedOption }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -38,10 +37,10 @@ const CustomSelect = ({ options }) => {
         }`}
         onClick={toggleDropdown}
       >
-        {selectedOption.label}
+        {selectedOption?.label}
       </div>
       <div className={`select-items ${isOpen ? "" : "select-hide"}`}>
-        {options.slice(1, -1).map((option, index) => (
+        {options.filter((o) => o.value !== selectedOption.value).map((option, index) => (
           <div
             key={index}
             onClick={() => handleOptionClick(option)}
