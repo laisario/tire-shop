@@ -195,7 +195,7 @@ const ShopDetails = ({product}) => {
                         Adicionar aos interesses
                       </button>
 
-                      <WhatsappButton pneu={[product]} />
+                      <WhatsappButton produtos={[product]} />
                     </div>
                   </div>
                 </div>

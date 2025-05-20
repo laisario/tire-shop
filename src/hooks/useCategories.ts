@@ -1,4 +1,4 @@
-export function useCategories(pneus) {
+export function useCategories(pneus: { carros: any, vans: any, caminhoes: any} | null) {
   return [
     {
       name: "Carros",

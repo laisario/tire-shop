@@ -11,7 +11,7 @@ import { useCategories } from "@/hooks/useCategories";
 
 const Categories = () => {
   const sliderRef = useRef(null);
-  const data = useCategories()
+  const data = useCategories(null)
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
