@@ -69,7 +69,7 @@ const SingleListItem = ({ item }) => {
 
             <button
               onClick={() => handleAddToCart()}
-              className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-gray-5 text-white ease-out duration-200 hover:bg-gray-5-dark"
+              className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-gray-5 text-white ease-out duration-200 hover:bg-gray-7"
             >
               Adicionar aos interesses
             </button>

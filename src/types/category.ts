@@ -1,5 +1,7 @@
 export type Category = {
-  title: string;
-  id: number;
+  name: string;
+  value: string;
   img: string;
+  isRefined: boolean,
+  products: number;
 };

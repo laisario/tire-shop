@@ -187,15 +187,15 @@ const ShopDetails = ({product}) => {
                       </div>
                     </form>
 
-                    <div className="flex items-center justify-around">
+                    <div className="flex items-center justify-between gap-4.5">
                       <button
                         onClick={() => handleAddToCart()}
-                        className="inline-flex font-medium py-3 px-7 rounded-md bg-yellow text-white ease-out duration-200 hover:bg-yellow-dark"
+                        className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-gray-5 text-white ease-out duration-200 hover:bg-gray-7"
                         >
                         Adicionar aos interesses
                       </button>
 
-                      <WhatsappButton pneu={product} />
+                      <WhatsappButton pneu={[product]} />
                     </div>
                   </div>
                 </div>

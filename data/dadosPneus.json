@@ -13271,7 +13271,7 @@
     "categoria": "",
     "marca": "BRIDGESTONE",
     "medida": "255/65 R 17",
-    "maisVendido": false,
+    "maisVendido": true,
     "precos": {
       "VISTA": "1205,67",
       "1x": "1239,02",
@@ -13370,7 +13370,7 @@
     "categoria": "",
     "marca": "BRIDGESTONE",
     "medida": "255/70 R 16",
-    "maisVendido": false,
+    "maisVendido": true,
     "precos": {
       "VISTA": "1069,85",
       "1x": "1099,45",
@@ -13469,7 +13469,7 @@
     "categoria": "",
     "marca": "BRIDGESTONE",
     "medida": "265/60 R 18",
-    "maisVendido": false,
+    "maisVendido": true,
     "precos": {
       "VISTA": "993,43",
       "1x": "1020,92",
@@ -13568,7 +13568,7 @@
     "categoria": "",
     "marca": "BRIDGESTONE",
     "medida": "265/65 R 17",
-    "maisVendido": false,
+    "maisVendido": true,
     "precos": {
       "VISTA": "1117,52",
       "1x": "1148,44",
