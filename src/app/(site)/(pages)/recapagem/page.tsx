@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   // other metadata
 };
 
+const images = [
+  { path: "/images/recapagem/b269.png", title: "b269" },
+  { path: "/images/recapagem/b440-02-a.png", title: "b440-02-a" },
+  { path: "/images/recapagem/brr13.png", title: "brr13" },
+  { path: "/images/recapagem/btl-sa2.png", title: "btl-sa2" }
+];
+
 function RecapagemPage() {
   return (
     <main>
@@ -24,17 +31,28 @@ function RecapagemPage() {
               width={750}
               height={477}
             /> */}
-            <SwiperCarrossel />
+            <SwiperCarrossel content={images}/>
           </div>
 
           <div>
             <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
-              Vida Nova para Seus Pneus
+              Recapagem Bandag: desempenho renovado com economia e segurança 
             </h2>
 
             <p className="mb-6 font-medium text-md xl:text-lg">
-              A <strong>AM Pneus</strong> é referência no ramo de <strong>recapagem de pneus</strong>, atuando com excelência e agilidade no atendimento a <strong>grandes frotas</strong>. Somos parceiros da <strong>Bandag</strong>, marca reconhecida mundialmente pela <strong>tecnologia de ponta e durabilidade superior em borrachas de recapagem</strong>.
-              Contamos com <strong>recapadora própria</strong>, o que nos permite total controle de qualidade e <strong>agilidade nos prazos de entrega</strong>, chegando a realizar serviços <strong>em até 24 horas</strong>, dependendo da localidade. Além disso, oferecemos o serviço de <strong>coleta dos pneus diretamente na sua empresa</strong>, garantindo ainda mais comodidade e eficiência.
+              A recapagem Bandag é um processo de renovação de pneus que utiliza tecnologia de ponta para aplicar uma nova banda de rodagem em carcaças previamente inspecionadas e aprovadas. Com rigorosos padrões de qualidade, o processo envolve: 
+            </p>
+
+            <ul className="list-disc list-inside text-md xl:text-lg text-dark font-medium space-y-2 mb-6">
+              <li>Inspeção detalhada da carcaça</li>
+              <li>Raspagem precisa da borracha antiga</li>
+              <li>Aplicação da nova banda com compostos exclusivos Bandag</li>
+              <li>Cura controlada em câmara especializada</li>
+              <li>Inspeções finais de segurança</li>
+            </ul>
+
+            <p className="mb-6 font-medium text-md xl:text-lg">
+              Esse método garante até 60% de economia em relação à compra de pneus novos, mantendo alto desempenho, segurança e menor impacto ambiental. É a escolha ideal para frotas que buscam custo-benefício, durabilidade e sustentabilidade. 
             </p>
           </div>
         </div>

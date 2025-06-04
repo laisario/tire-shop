@@ -11,6 +11,8 @@ import Testimonials from "./Testimonials";
 import Newsletter from "../Common/Newsletter";
 import RegionSelector from "../RegionSelector";
 import { useRegion } from "@/hooks/useRegion";
+import SocialMediaList from "./SocialMediaList";
+import PartnerCompany from "./PartnerCompany";
 
 const Home = () => {
   const { region } = useRegion();
@@ -22,10 +24,9 @@ const Home = () => {
       <Hero />
       <Categories />
       <PromoBanner />
-      {/* <BestSeller /> */}
-      {/* <CounDown /> */}
-      <Testimonials />
       <StoreMap />
+      <SocialMediaList />
+      <PartnerCompany />
     </main>
   );
 };

@@ -1,4 +1,4 @@
-import serviceData from '@/components/ServiceGrid/serviceData'
+import {serviceData} from '@/components/ServiceGrid/serviceData'
 import React from 'react'
 
 function useSearchService() {

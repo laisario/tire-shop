@@ -1,25 +1,46 @@
-export function useCategories(pneus: { carros: any, vans: any, caminhoes: any} | null) {
+export function useCategories(pneus: { automoveis: any, suvsEPickups: any, onibusECaminhoesMisto: any, onibusECaminhoesRegional: any, onibusECaminhoesRodoviario: any, onibusECaminhoesUrbano: any} | null) {
   return [
     {
-      name: "Carros",
-      products: pneus?.carros?.length | 0,
+      name: "Automóveis",
+      products: pneus?.automoveis?.length | 0,
       isRefined: false,
-      value: "carros",
-      img: "/images/categories/categories-01.jpg"
+      value: "automoveis",
+      img: "/images/categories/automoveis.jpeg"
     },
     {
-      name: "Vans",
-      products: pneus?.vans?.length  | 0,
+      name: "SUVs e Pick Ups",
+      products: pneus?.suvsEPickups?.length  | 0,
       isRefined: false,
-      value: "vans",
-      img: "/images/categories/categories-02.jpg",
+      value: "suvs-e-pickups",
+      img: "/images/categories/suv.jpg",
     },
     {
-      name: "Ônibus / Caminhões",
-      products: pneus?.caminhoes?.length  | 0,
+      name: "Ônibus / Caminhões Misto",
+      products: pneus?.onibusECaminhoesMisto?.length  | 0,
       isRefined: false,
-      value: "caminhões / ônibus",
-      img: "/images/categories/categories-03.jpg",
+      value: "caminhoes-onibus-misto",
+      img: "/images/categories/misto.jpg",
+    },
+    {
+      name: "Ônibus / Caminhões Regional",
+      products: pneus?.onibusECaminhoesRegional?.length  | 0,
+      isRefined: false,
+      value: "caminhoes-onibus-regional",
+      img: "/images/categories/regional.jpg",
+    },
+    {
+      name: "Ônibus / Caminhões Rodoviário",
+      products: pneus?.onibusECaminhoesRodoviario?.length  | 0,
+      isRefined: false,
+      value: "caminhoes-onibus-rodoviario",
+      img: "/images/categories/rodoviario.jpg",
+    },
+    {
+      name: "Ônibus / Caminhões Urbano",
+      products: pneus?.onibusECaminhoesUrbano?.length  | 0,
+      isRefined: false,
+      value: "caminhoes-onibus-urbano",
+      img: "/images/categories/urbano.jpg",
     },
   ];
 }

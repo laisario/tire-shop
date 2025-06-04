@@ -17,9 +17,10 @@ const ServiceDetailsPage = () => {
   });
   const { id } = useParams();
   const { getServiceById } = useSearchService();
-
+  
   useEffect(() => {
     const response = getServiceById(String(id))
+    console.log(response)
     setService(response)
   }, [])
 

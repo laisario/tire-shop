@@ -35,10 +35,11 @@ const gerarMensagemWhatsapp = (produtos: any[]) => {
   )}\n\nPoderia me fornecer mais informações sobre?`;
 };
 
-function WhatsappButton({produtos, titulo = 'Compre agora ou saiba mais!'}) {
+function WhatsappButton({produtos, titulo = 'Compre agora ou saiba mais!', color = "green"}) {
   const handleClick = () => {
     const mensagem = gerarMensagemWhatsapp(produtos);
-    const numeroWhatsapp = "5524993234053"// coloque o número do WhatsApp com DDI e DDD
+    const region = window.localStorage.getItem('region')
+    const numeroWhatsapp = region === 'rio' ? "5524974012747" : "5524993234053"
     const link = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
     window.open(link, "_blank");
   };
@@ -46,7 +47,7 @@ function WhatsappButton({produtos, titulo = 'Compre agora ou saiba mais!'}) {
   return (
     <button
       onClick={handleClick}
-      className="inline-flex w-100 gap-4 font-medium text-white bg-green py-3 px-7 rounded-md ease-out duration-200 hover:bg-green-dark"
+      className={`inline-flex w-full gap-4 font-medium text-white bg-${color} py-3 px-7 rounded-md ease-out duration-200 hover:bg-${color}-dark`}
     >
       {titulo}
       <Image width={20} height={20} src={whatsAppSvg} alt="Icon WhatsApp" />

@@ -11,6 +11,7 @@ import Switch from "../Switch";
 import SwitchMobile from "../Switch/SwitchMobile";
 import Search from "./Search";
 import { useRouter } from "next/navigation";
+import FindByMeasure from "../Switch/FindByMeasure";
 
 const options = [
   { label: "Todas categorias", value: "todas" },
@@ -30,6 +31,7 @@ const Header = () => {
   const { openCartModal } = useCartModalContext();
   const isMobile = useIsMobile();
   const router = useRouter();
+  const region = window.localStorage.getItem('region')
 
   const product = useAppSelector((state) => state.cartReducer.items);
 
@@ -81,12 +83,12 @@ const Header = () => {
         {/* <!-- header top start --> */}
         <div
           className={`flex flex-row lg:flex-nowrap  justify-between gap-5 items-center lg:items-center xl:justify-between ease-out duration-200 ${
-            stickyMenu ? "py-4" : "py-6"
+            stickyMenu ? "py-4" : "py-2"
           }`}
         >
           {/* <!-- header LOGO --> */}
           <div className="w-auto sm:flex-row flex sm:justify-between sm:items-center gap-5 sm:gap-10">
-            <Link className="bg-gray-7 p-2 rounded" href="/">
+            <Link className="p-2 rounded" href="/">
               <Image
                 src="/images/logo/logo.png"
                 alt="Logo"
@@ -127,7 +129,7 @@ const Header = () => {
                 </span>
                 <a 
                   target="_blank" 
-                  href={`https://web.whatsapp.com/send?phone=${553598567414}&text=Oi!%20Estou%20interessado(a)%20em%20saber%20mais%20sobre...&app_absent=0`} 
+                  href={`https://web.whatsapp.com/send?phone=${region === "rio" ? 5524974012747 : 553598567414 }&text=Oi!%20Estou%20interessado(a)%20em%20saber%20mais%20sobre...&app_absent=0`} 
                   className="font-medium text-custom-sm text-dark"
                 >
                   {getAtendimentoMensagem()}
@@ -267,7 +269,7 @@ const Header = () => {
 
         {!isMobile && (
           <div >
-            <Switch />
+            <FindByMeasure />
           </div>
         )}
 
@@ -312,7 +314,7 @@ const Header = () => {
             </div>
             {/* // <!--=== Main Nav End ===--> */}
 
-            {isMobile && <SwitchMobile />}
+            {isMobile && <FindByMeasure />}
             {/* // <!--=== Searchfor measure or car ===--> */}
           </div>
         </div>

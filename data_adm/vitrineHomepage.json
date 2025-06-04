@@ -1,0 +1,210 @@
+[
+  {
+    "carrossel": [
+      {
+        "id": 1,
+        "titulo": "LSU1  (Urbano) 215/75 R 17,5",
+        "categoria": "",
+        "marca": "CONTINENTAL",
+        "medida": "215/75 R 17,5",
+        "maisVendido": true,
+        "precos": {
+          "VISTA": "1270,00",
+          "1x": "1285,24",
+          "2x": "1300,48",
+          "3x": "1315,72",
+          "4x": "1330,96",
+          "20 em 20": "1330,96"
+        },
+        "imgs": {
+          "thumbnails": ["/images/vitrine/vitrine-1.webp"],
+          "previews": []
+        },
+        "descricao": {
+          "basica": "",
+          "dadosTecnicos": [
+            {
+              "caracteristica": "Marca",
+              "valor": "CONTINENTAL"
+            },
+            {
+              "caracteristica": "Linha",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Modelo",
+              "valor": "LSU1  (Urbano)"
+            },
+            {
+              "caracteristica": "Tamanho",
+              "valor": "215/75 R 17,5"
+            },
+            {
+              "caracteristica": "Índice de carga",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Índice de velocidade",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de serviço",
+              "valor": ""
+            },
+            {
+              "caracteristica": "É run flat",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de terreno",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de construção",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Relação de aspecto do pneu",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Largura de secção",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Diâmetro da roda",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Resistência ao rolamento",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Aderência em pista molhada",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Ruído externo",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de unidade",
+              "valor": "Unidade"
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "titulo": "M 814 215/75 R 17,5",
+        "categoria": "",
+        "marca": "BRIDGESTONE",
+        "medida": "215/75 R 17,5",
+        "maisVendido": false,
+        "precos": {
+          "VISTA": "1251,63",
+          "1x": "1266,65",
+          "2x": "1281,67",
+          "3x": "1296,69",
+          "4x": "1311,71",
+          "20 em 20": "1311,71"
+        },
+        "imgs": {
+          "thumbnails": ["/images/vitrine/vitrine-2.png"],
+          "previews": [
+            "/images/descricaoPneus/215/75R17,5M814.webp",
+            "/images/descricaoPneus/215/75R17,5M814.webp"
+          ]
+        },
+        "descricao": {
+          "basica": "",
+          "dadosTecnicos": [
+            {
+              "caracteristica": "Marca",
+              "valor": "BRIDGESTONE"
+            },
+            {
+              "caracteristica": "Linha",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Modelo",
+              "valor": "M 814"
+            },
+            {
+              "caracteristica": "Tamanho",
+              "valor": "215/75 R 17,5"
+            },
+            {
+              "caracteristica": "Índice de carga",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Índice de velocidade",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de serviço",
+              "valor": ""
+            },
+            {
+              "caracteristica": "É run flat",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de terreno",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de construção",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Relação de aspecto do pneu",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Largura de secção",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Diâmetro da roda",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Resistência ao rolamento",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Aderência em pista molhada",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Ruído externo",
+              "valor": ""
+            },
+            {
+              "caracteristica": "Tipo de unidade",
+              "valor": "Unidade"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Pneu CONTINENTAL HSR2 275/70 R 22,5",
+    "imagem": "/images/vitrine/vitrine-1-1.webp"
+  },
+  {
+    "id": 3,
+    "titulo": "Pneu BRIDGESTONE M 814 215/75 R 17,5",
+    "imagem": "/images/vitrine/vitrine-2.png"
+  },
+  {
+    "id": 5,
+    "titulo": "Pneu CONTINENTAL LA3 (Direcional) 235/75 R 17,5",
+    "imagem": "/images/vitrine/vitrine-3.webp"
+  }
+]

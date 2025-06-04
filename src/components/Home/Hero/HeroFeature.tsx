@@ -4,14 +4,9 @@ import Image from "next/image";
 const featureData = [
   {
     img: "/images/icons/icon-01.svg",
-    title: "Entrega gratis",
-    description: "Para todos os pedidos acima de R$5000",
+    title: "Entregas em até 24h",
+    description: "Na região Sul-Fluminense ",
   },
-  // {
-  //   img: "/images/icons/icon-02.svg",
-  //   title: "Devoluções 1 por 1",
-  //   description: "Cancelamento após 1 dia",
-  // },
   {
     img: "/images/icons/icon-03.svg",
     title: "Pagamento 100% seguro",

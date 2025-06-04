@@ -2,6 +2,7 @@ import React from "react";
 import HeroCarousel from "./HeroCarousel";
 import HeroFeature from "./HeroFeature";
 import Image from "next/image";
+import dados from "../../../../data_adm/vitrineHomepage.json"
 
 const Hero = () => {
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
               height={520}
             />
 
-            <HeroCarousel />
+            <HeroCarousel dados={dados[0].carrossel}/>
           </div>
         </div>
 
@@ -28,11 +29,11 @@ const Hero = () => {
             <div className="w-full relative rounded-[10px] bg-white p-4 sm:p-7.5">
               <div className="flex items-center gap-14">
                 <h2 className="font-semibold text-dark text-xl">
-                  <a href="#"> Kit 2 Pneus 215/60r16 Bridgestone Ecopia Ep150 95v Índice de velocidade V </a>
+                  <a href="#">{dados[1].titulo}</a>
                 </h2>
               
                 <Image
-                  src="/images/hero/hero-02.jpg"
+                  src={dados[1].imagem}
                   alt="mobile image"
                   width={123}
                   height={161}
@@ -42,11 +43,11 @@ const Hero = () => {
             <div className="w-full relative rounded-[10px] bg-white p-4 sm:p-7.5">
               <div className="flex items-center gap-14">
                   <h2 className="max-w-[153px] font-semibold text-dark text-xl">
-                    <a href="#">Pneu Continental 225/75r16c 118/116r Vancontact Ap</a>
+                    <a href="#">{dados[2].titulo}</a>
                   </h2>
 
                   <Image
-                    src="/images/hero/hero-03.webp"
+                    src={dados[2].imagem}
                     alt="mobile image"
                     width={123}
                     height={161}

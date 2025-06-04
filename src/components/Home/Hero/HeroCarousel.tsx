@@ -7,8 +7,9 @@ import "swiper/css/pagination";
 import "swiper/css";
 
 import Image from "next/image";
+import WhatsappButton from "@/components/Common/Whatsapp/WhatsappButton";
 
-const HeroCarousal = () => {
+const HeroCarousal = ({dados}) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -23,43 +24,38 @@ const HeroCarousal = () => {
       modules={[Autoplay, Pagination]}
       className="hero-carousel"
     >
-      <SwiperSlide>
-        <div className="flex items-center pt-6 sm:pt-0 flex-col-reverse sm:flex-row">
-          <div className="max-w-[394px] py-10 sm:py-15 lg:py-24.5 pl-4 sm:pl-7.5 lg:pl-12.5">
-            <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
-              <span className="block font-semibold text-heading-3 sm:text-heading-1 text-yellow">
-                Kit 4
-              </span>
-              <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-                pneus
-                <br />
-                Aro 15
-              </span>
+      {dados.map((produto) => {
+        const isContinental = produto?.marca?.toLowerCase() === 'continental'
+        return (
+          <SwiperSlide key={produto?.id}>
+            <div className="flex p-8 items-center justify-center flex-col-reverse sm:flex-row">
+              <div className="w-full sm:w-1/2 flex flex-col justify-center gap-4 h-[358px] px-4 sm:px-7.5 lg:px-12.5">
+                <Image
+                  src={isContinental ? "/images/logo/logo.svg" : "/images/logo/Bridgestone.svg"} 
+                  alt="Logo da marca"
+                  width={150}
+                  height={50}
+                />
+
+                <h1 className={`font-semibold text-dark text-xl sm:text-3xl mb-3 text-${isContinental ? 'yellow' : 'red'}`}>
+                  <a href={`/pneus/${produto.id}`}>{produto.titulo}</a>
+                </h1>
+
+                <WhatsappButton produtos={produto} color={isContinental ? 'yellow' : 'red'} />
+              </div>
+
+              <div className="w-full sm:w-1/2 flex justify-center">
+                <Image
+                  src={produto?.imgs?.thumbnails[0]}
+                  alt={produto.titulo}
+                  width={351}
+                  height={358}
+                />
+              </div>
             </div>
-
-            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">15 185/65r15 88H PowerContact 2</a>
-            </h1>
-
-            <a
-              href="/pneus"
-              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-yellow mt-10"
-            >
-              Comprar agora
-            </a>
-          </div>
-
-          <div>
-            <Image
-              src="/images/hero/hero-03.webp"
-              alt="pneu continetal propaganda"
-              width={351}
-              height={358}
-            />
-          </div>
-        </div>
-      </SwiperSlide>
-      
+          </SwiperSlide>
+        )
+      })}
     </Swiper>
   );
 };

@@ -34,34 +34,13 @@ function Switch() {
             </svg>
             <span>medida</span>
           </button>
-          <button
-            className={`relative flex items-center justify-center gap-1 w-1/2 text-center py-1 text-sm font-medium transition-all ${selectedOption === "carro" ? "text-white" : "text-gray-5"}`}
-            onMouseDown={(e) => {
-              e.preventDefault();
-              setSelectedOption("carro");
-            }}
-            >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 64 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              >
-              <rect x="8" y="12" width="48" height="10" rx="2" stroke={selectedOption === 'carro' ? 'white' : "black"}  strokeWidth="2" fill={selectedOption === 'carro' ? 'white' : "black"}  />
-              <circle cx="18" cy="26" r="3" stroke={selectedOption === 'carro' ? 'white' : "black"} strokeWidth="2" fill={selectedOption === 'carro' ? 'white' : "black"} />
-              <circle cx="46" cy="26" r="3" stroke={selectedOption === 'carro' ? 'white' : "black"} strokeWidth="2" fill={selectedOption === 'carro' ? 'white' : "black"} />
-              <polygon points="20,12 28,4 44,4 52,12" stroke={selectedOption === 'carro' ? 'white' : "black"} strokeWidth="2" fill="none" />
-            </svg>
-            carro
-          </button>
+
         </div>
       </div>
       
 
       <div>
         {selectedOption === 'medida' && <FindByMeasure />}
-        {selectedOption === 'carro' && <FindByCar />}
       </div>
 
       

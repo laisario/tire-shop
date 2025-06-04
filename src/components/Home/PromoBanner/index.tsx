@@ -5,88 +5,93 @@ const PromoBanner = () => {
   return (
     <section className="overflow-hidden py-20">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-        {/* <!-- promo banner big --> */}
-        <div className="flex items-center relative z-1 overflow-hidden rounded-lg bg-yellow-light-4 py-12.5 lg:py-17.5 xl:py-22.5 px-4 sm:px-7.5 lg:px-14 xl:px-19 mb-7.5">
-          <div className="max-w-[550px] w-full">
-            <span className="block font-medium text-xl text-dark mb-3">
-              Nossos servicos
+        {/* Promo banner */}
+        <div className="flex flex-col-reverse lg:flex-row items-center overflow-hidden rounded-lg bg-yellow-light-4 py-12.5 px-4 sm:px-7.5 lg:px-14 xl:px-19 mb-7.5 relative">
+          <div className="w-full lg:w-1/2 z-10">
+            <span className="block font-semibold text-lg text-dark mb-2 uppercase tracking-wide">
+              Nossos serviços
             </span>
 
-            <h2 className="font-bold text-xl lg:text-heading-4 xl:text-heading-3 text-dark mb-5">
-              Alinhamento, Balanceamento, Troca de oleo e Troca de lona
+            <h2 className="font-bold text-2xl lg:text-4xl text-dark leading-tight mb-4">
+              Pneus novos, Recapagem, Alinhamento e Troca de óleo
             </h2>
 
+            <p className="text-base font-medium text-dark/80 mb-6">
+              Serviços essenciais para manter seu veículo em dia com segurança e qualidade.
+            </p>
+
             <a
-              href="#"
-              className="inline-flex font-medium text-custom-sm text-white bg-yellow py-[11px] px-9.5 rounded-md ease-out duration-200 hover:bg-yellow-dark mt-7.5"
+              href="/servicos"
+              className="inline-block font-medium text-white bg-yellow py-3 px-6 rounded-md transition duration-200 hover:bg-yellow-dark"
             >
               Saiba mais
             </a>
           </div>
-
-          <Image
-            src="/images/promo/promo-01.jpg"
-            alt="promo img"
-            // className="absolute bottom-0 right-4 lg:right-26 -z-1"
-            width={500}
-            height={800}
-          />
+          <div className="w-full lg:w-1/2 mb-8 lg:mt-0 flex justify-center">
+            <Image
+              src="/images/promo/promo-01.jpg"
+              alt="promo img"
+              className="rounded-md w-full h-auto object-cover max-h-[400px]"
+              width={500}
+              height={400}
+            />
+          </div>
         </div>
 
         <div className="grid gap-7.5 grid-cols-1 lg:grid-cols-2">
           {/* <!-- promo banner small --> */}
-          <div className="relative z-1 overflow-hidden rounded-lg bg-gray-4 py-10 xl:py-16 px-4 sm:px-7.5 xl:px-10">
+          <div className="flex flex-row items-center rounded-lg bg-gray-4 py-10 px-4 sm:px-7.5 xl:px-10">
+            <div className="w-full lg:w-1/2 mt-6 lg:mb-0 flex justify-center">
               <Image
                 src="/images/promo/promo-02.webp"
                 alt="promo img"
-                className="absolute top-1/2 -translate-y-1/2 left-3 sm:left-10 -z-1"
-                width={241}
-                height={241}
+                className="rounded-md w-full h-auto object-contain max-h-[240px]"
+                width={240}
+                height={240}
               />
+            </div>
 
-            <div className="text-right">
-              <h2 className="font-bold text-md lg:text-heading-4 text-dark mb-2.5">
-                Borracharia,
-                <br />
-                 Manga de eixo
-                 <br />
+            <div className="w-full lg:w-1/2 z-10 text-right">
+              <div className="flex flex-col justify-between items-end gap-4">
+                <h2 className="font-bold text-2xl text-dark leading-snug flex-[0.7]">
+                  Borracharia,<br />
+                  Manga de eixo<br />
                   & Posto de molas
-              </h2>
-              <a
-                href="#"
-                className="inline-flex font-medium text-custom-sm text-white bg-gray-5 py-2.5 px-8.5 rounded-md ease-out duration-200 hover:bg-gray-7 mt-9"
-              >
-                Saiba mais
-              </a>
+                </h2>
+                <a
+                  href="/servicos"
+                  className="flex-[0.3] text-center font-medium text-white bg-gray-7 py-2.5 px-6 rounded-md transition duration-200 hover:bg-gray-5"
+                >
+                  Saiba mais
+                </a>
+              </div>
             </div>
           </div>
 
           {/* <!-- promo banner small --> */}
-          <div className="relative z-1 overflow-hidden rounded-lg bg-blue-light-5 py-10 xl:py-16 px-4 sm:px-7.5 xl:px-10">
-            <Image
-              src="/images/promo/promo-03.jpeg"
-              alt="promo img"
-              className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-8.5 -z-1"
-              width={240}
-              height={240}
-            />
-
-            <div>
-              <h2 className="font-bold text-md lg:text-heading-4 text-dark mb-2.5">
-                Troca de balanca,
-                <br />
-                buchas carreta, 
-                <br />
-                veiculos trucado
-                <br />
-                & tocos
+          <div className="flex flex-row items-center rounded-lg bg-blue-light-5 py-10 px-4 sm:px-7.5 xl:px-10 gap-2">
+            <div className="flex flex-col justify-between items-start gap-4">
+              <h2 className="font-bold text-2xl text-dark leading-snug flex-[0.7]">
+                Atendimento a Frotas,<br />
+                Troca de buchas,<br />
+                & muito mais
               </h2>
               <a
-                href="#"
-                className="inline-flex font-medium text-custom-sm text-white bg-blue py-2.5 px-8.5 rounded-md ease-out duration-200 hover:bg-blue-dark mt-7.5"
+                href="/servicos"
+                className="flex-[0.3] text-center font-medium text-white bg-blue py-2.5 px-6 rounded-md transition duration-200 hover:bg-blue-dark"
               >
                 Saiba mais
               </a>
+            </div>
+
+            <div className="w-full lg:w-1/2 mb-6 lg:mb-0 flex justify-center">
+              <Image
+                src="/images/promo/promo-03.jpeg"
+                alt="promo img"
+                className="rounded-md w-full h-auto object-contain max-h-[240px]"
+                width={240}
+                height={240}
+              />
             </div>
           </div>
         </div>

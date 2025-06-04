@@ -7,15 +7,8 @@ import 'swiper/css/pagination';
 
 import { Autoplay } from 'swiper/modules';
 
-const images = [
-  { path: "/images/recapagem/b269.png", title: "b269" },
-  { path: "/images/recapagem/b440-02-a.png", title: "b440-02-a" },
-  { path: "/images/recapagem/brr13.png", title: "brr13" },
-  { path: "/images/recapagem/btl-sa2.png", title: "btl-sa2" }
-];
 
-
-function SwiperCarrossel() {
+function SwiperCarrossel({content}) {
   return (
     <Swiper
       autoplay={{
@@ -24,19 +17,59 @@ function SwiperCarrossel() {
       }}
       modules={[Autoplay]}
     >
-        {images.map((image) => (
-          <SwiperSlide key={image}>
-            <div className="flex flex-col justify-around items-center">
-              <Image
-                src={image.path}
-                alt={"product image"}
-                width={350}
-                height={350}
-                />
-              <p className="text-2xl font-bold text-gray-800">{image.title.toUpperCase()}</p>
-            </div>
-          </SwiperSlide>
-        ))}
+        {content.map((item, index) => {
+          const isVideo = item?.path?.startsWith("/videos/");
+          return (
+            <SwiperSlide key={index}>
+              <div className="flex relative w-full">
+                {isVideo ? (
+                  <div className="flex flex-col md:flex-row items-center gap-6">
+                    <div className="flex flex-col gap-3 w-full md:w-1/2">
+                      <Image
+                        src={item.image}
+                        className='bg-[#113864] p-2 rounded-md'
+                        alt={item.styleImg}
+                        width={120}
+                        height={60}
+                      />
+                      <p className="font-medium text-dark text-lg text-center md:text-left">
+                        {item.title}
+                      </p>
+                      <p>{item.description}</p>
+                    </div>
+               
+                    <div className="rounded-[10px] overflow-hidden w-full md:w-1/2">
+                      <video
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        controls
+                      >
+                        <source src={item.path} type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                ) : (
+                  <div className='flex flex-col justify-center items-center'>
+                    <Image
+                      src={item.path}
+                      alt="product image"
+                      width={350}
+                      height={350}
+                      className="rounded-[10px]"
+                    />
+                    <p className="text-2xl font-bold text-gray-800">
+                      {item.title.toUpperCase()}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </SwiperSlide>
+          );
+        })}
     </Swiper>
   )
 }
