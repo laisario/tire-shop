@@ -1,25 +1,65 @@
-# Free eCommerce Template for Next.js - NextMerce
+# 🚗 AMPneus — Tire Shop Landing Page
 
-The free Next.js eCommerce template is a lite version of the NextMerce Next.js eCommerce boilerplate, designed to streamline the launch and management of your online store.
+AMPneus Minas is a modern and responsive **Next.js-based landing page** built for a local tire and auto service company.  
+The website showcases the **tires, truck parts, services, and location** of the shop, providing customers with an easy way to explore what the company offers.
 
-![NextMerce](https://github.com/user-attachments/assets/57155689-a756-4222-8af7-134e556acae2)
+🔗 **Live Website:** [https://ampneusminas.com.br/](https://ampneusminas.com.br/)
+
+---
+
+## 🏢 About the Company
+
+**AMPneus Minas** is a local tire and auto service company based in Minas Gerais, Brazil.  
+The company specializes in **tire sales, truck parts, and general auto maintenance**, offering reliable service and quality products to both individual drivers and commercial fleets.  
+
+Their mission is to provide fast, trustworthy, and affordable solutions to keep customers safe on the road.
+
+---
+
+## ⚙️ Overview
+
+This project is a custom landing page developed using **Next.js**, inspired by modern eCommerce templates such as **NextMerce**.  
+It focuses on simplicity, performance, and clean presentation — ideal for small local businesses wanting a strong web presence.
+
+### ✨ Key Features
+- 🛞 **Product Showcase:** Highlights the tire brands and models available.  
+- 🚛 **Truck Parts Section:** Dedicated area for heavy vehicle parts *(currently in development)*.  
+- 🧰 **Services Section:** Displays the main mechanical and tire-related services offered.  
+- 📍 **Location & Map Integration:** Shows shop location using Google Maps.  
+- ⚡ **Fast & SEO-Optimized:** Built with Next.js for optimal performance and visibility.  
+- 🧱 **Responsive Design:** Works seamlessly on mobile, tablet, and desktop.
+
+---
+
+## 🧩 Tech Stack
+
+| Technology     | Description |
+|----------------|-------------|
+| **Next.js**    | React framework for SSR and SSG |
+| **React**      | UI components and interactivity |
+| **Tailwind CSS** | Utility-first CSS framework for styling |
+| **TypeScript** | Safer and more maintainable code |
+| **Vercel**     | Deployment and hosting platform |
+
+---
+
+## 🧭 Roadmap
+
+| Feature | Status |
+|----------|---------|
+| Landing page structure | ✅ Done |
+| Product and service sections | ✅ Done |
+| SEO configuration | ✅ Done |
+| Location & map integration | ✅ Done |
+| Truck parts section | 🚧 In Progress |
+| Dynamic product data | 🚧 In Progress |
 
 
-While NextMerce Pro features advanced functionalities, seamless integration, and customizable options, providing all the essential tools needed to build and expand your business, the lite version offers a basic Next.js template specifically crafted for eCommerce websites. Both versions ensure superior performance and flexibility, all powered by Next.js.
-
-### NextMerce Free VS NextMerce Pro
-
-| ✨ Features                         | 🎁 NextMerce Free                 | 🔥 NextMerce Pro                        |
-|----------------------------------|--------------------------------|--------------------------------------|
-| Next.js Pages                    | Static                         | Dynamic Boilerplate Template         |
-| Components                       | Limited                        | All According to Demo                |
-| eCommerce Functionality          | Included                       | Included                             |
-| Integrations (DB, Auth, etc.)    | Not Included                   | Included                             |
-| Community Support                | Included                       | Included                             |
-| Premium Email Support            | Not Included                   | Included                             |
-| Lifetime Free Updates            | Included                       | Included                             |
+---
 
 
-#### [🚀 Live Demo](https://demo.nextmerce.com/)
+# Install dependencies
+npm install
 
-#### [🌐 Visit Website](https://nextmerce.com/)
+# Run locally
+npm run dev
